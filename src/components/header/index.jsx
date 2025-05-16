@@ -18,7 +18,7 @@ const Header = () => {
           <Link className="max-w-[300px]   h-[73px] flex items-center" to={"/"}>
             <img
               className="w-full"
-              src="/public/LOGO.svg"
+              src="/LOGO.svg"
               alt="logo"
               loading="lazy"
             />
