@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaWhatsappSquare } from "react-icons/fa";
+import { FaPhoneFlip } from "react-icons/fa6";
+import { links } from "../../data/links";
+
 
 const Header = () => {
-    const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-      const toggleMenu = () => {
-        setIsOpen((prev) => !prev);
-      };
+  const toggleMenu = () => {
+    setIsOpen((prev) => !prev);
+  };
   return (
     <>
       <header className="bg-[#FCFCFC] fixed top-0 w-full px-[20px] pb-[10px]">
@@ -15,20 +18,26 @@ const Header = () => {
           id="header-top"
           className="flex items-center justify-between gap-[20px] container mx-auto"
         >
-          <Link className="max-w-[300px]   h-[73px] flex items-center" to={"/"}>
-            <img
-              className="w-full"
-              src="/LOGO.svg"
-              alt="logo"
-              loading="lazy"
-            />
+          <Link
+            className="w-[220px] sm:max-w-[300px]   h-[73px] flex items-center"
+            to={"/"}
+          >
+            <img className="w-full" src="/LOGO.svg" alt="logo" loading="lazy" />
           </Link>
           <ul className="flex items-center gap-[20px] lg:gap-[60px]">
-            <li className="hidden sm:flex  flex-col w-[170px]">
+            <li className=" sm:flex  flex-col sm:w-[170px]">
               <a className=" text-[18px] font-bold" href="tel:+998998180111">
-                +998(99) 818-01-11
+                <span className="hidden sm:inline-block">
+                  +998(99) 818-01-11
+                </span>
+                <span className="sm:hidden">
+                  <FaPhoneFlip />
+                </span>
               </a>
-              <a href=" font-[300] " className="flex item-center gap-[10px]">
+              <a
+                href=" font-[300] "
+                className="hidden sm:flex item-center gap-[10px]"
+              >
                 <FaWhatsappSquare className="text-[22px]" />
                 <span className="">Whatsapp</span>
               </a>
@@ -65,14 +74,15 @@ const Header = () => {
               </Link>
             </li>
 
-            <button
-              className={`menu-btn lg:hidden ${isOpen ? "active" : ""}`}
-              onClick={toggleMenu}
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
+            <li onClick={toggleMenu} className="flex items-center gap-[5px]">
+              <button
+                className={`menu-btn lg:hidden ${isOpen ? "active" : ""}`}
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </li>
           </ul>
         </nav>
 
@@ -175,18 +185,9 @@ const Header = () => {
         </ul>
 
         <ul className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 lg:hidden p-[10px] lg:pl-[100px] container mx-auto items-center gap-[20px]">
-          {[
-            "Направления",
-            "Услуги",
-            "Врачи",
-            "Отзывы",
-            "Акции",
-            "О центре",
-            "Детство",
-            "Контакты",
-          ].map((text, idx) => (
+          {links.map(({ text, href }, idx) => (
             <li key={idx}>
-              <NavLink className="font-bold ml-[10px] inline-block" to={"/"}>
+              <NavLink className="font-bold ml-[10px] inline-block" to={href}>
                 {text}
               </NavLink>
             </li>
