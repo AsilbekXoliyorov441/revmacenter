@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import FormSend from '../../components/form-send';
 
 const ContactPage = () => {
   return (
@@ -56,6 +57,8 @@ const ContactPage = () => {
           allowFullScreen
           title="Yandex Map"
         />
+
+        <FormSend/>
       </div>
     </section>
   );
