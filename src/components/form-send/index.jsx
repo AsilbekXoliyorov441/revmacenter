@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from "react";
 import { services } from "../../data/links";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import { toast } from "react-toastify";
 
 const TELEGRAM_BOT_TOKEN = "7912663808:AAEdKAKzgWROxRtrtfuRlJuK3WDqwlmFYjg";
 const CHAT_ID = "6713537237";
@@ -85,10 +86,10 @@ export default function FormSend() {
           chat_id: CHAT_ID,
           text: msg,
           parse_mode: "HTML",
-        }),
+        }),        
       });
 
-      alert("Muvaffaqiyatli yuborildi!");
+      toast.success("Muvaffaqiyatli yuborildi!")
       // reset form
       setForm({
         service: "",
@@ -100,7 +101,7 @@ export default function FormSend() {
       setTouched({});
     } catch (err) {
       console.error("Telegramga yuborishda xatolik:", err);
-      alert("Xatolik yuz berdi. Qaytadan urinib ko‘ring.");
+      toast.error("Xatolik yuz berdi. Qaytadan urinib ko‘ring.");
     } finally {
       setSending(false);
     }
