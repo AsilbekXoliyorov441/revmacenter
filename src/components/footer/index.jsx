@@ -98,7 +98,7 @@ const Footer = () => {
           </ul>
         </div>
       </footer>
-      <span className="text-center flex justify-center items-center h-[40px]">© 2011-2023 Городской Медицинский Центр. Все права защищены.</span>
+      <span className="text-center flex justify-center items-center py-[10px] ">© 2011-2023 Городской Медицинский Центр. Все права защищены.</span>
     </>
   );
 };
