@@ -8,7 +8,10 @@
   justify-content: space-between;
   cursor: pointer;
 }
-
+.custom-btn{
+  background: #333;
+  transition: all 0.3s ease;
+}
 .menu-btn span {
   height: 4px;
   width: 100%;
@@ -35,4 +38,7 @@
   .menu-btn{
     display: none;
   }
+}
+button{
+  cursor: pointer;
 }

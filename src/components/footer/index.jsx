@@ -6,7 +6,7 @@ import { FaTelegram, FaWhatsappSquare } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-      <footer className="bg-[#F0F6F9] pt-[30px] pb-[30px]">
+      <footer className="bg-[#F0F6F9] pt-[30px] pb-[30px] mt-4">
         <div className="container top-footer mx-auto px-[20px]">
           <div className="flex items-center justify-between">
             <Link

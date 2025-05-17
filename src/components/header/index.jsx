@@ -13,7 +13,7 @@ const Header = () => {
   };
   return (
     <>
-      <header className="bg-[#FCFCFC] fixed top-0 w-full px-[20px] pb-[10px]">
+      <header className="bg-[#FCFCFC] fixed top-0 w-full px-[20px] pb-[10px] z-[1000]">
         <nav
           id="header-top"
           className="flex items-center justify-between gap-[20px] container mx-auto"
