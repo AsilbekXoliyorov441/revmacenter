@@ -40,6 +40,7 @@ export default function Hero() {
                             <img
                                 src="/doctor.png"
                                 alt="Doctor"
+                                loading="lazy"
                                 className="w-[300px] md:w-[460px] object-contain"
                             />
                         </div>

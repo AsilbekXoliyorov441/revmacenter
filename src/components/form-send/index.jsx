@@ -89,7 +89,7 @@ export default function FormSend() {
         }),        
       });
 
-      toast.success("Muvaffaqiyatli yuborildi!")
+      toast.success("Xabaringiz yuborildi!")
       // reset form
       setForm({
         service: "",
@@ -108,8 +108,8 @@ export default function FormSend() {
   };
 
   return (
-    <section id="form">
-      <div className="container bg-gradient-to-r from-[#02B0C5] to-[#0074B8] p-14 rounded-[12px]">
+    <section id="form" className="pt-[60px] pb-[90px]">
+      <div className="container bg-gradient-to-r from-[black] to-[#8e0c0c]  bg-cover bg-center p-14 rounded-[12px]">
         <h1 className="text-4xl font-bold text-white mb-6">
           Записаться на приём
         </h1>
@@ -205,13 +205,14 @@ export default function FormSend() {
           </div>
 
           {/* SUBMIT & POLICY */}
-          <div className="flex flex-col gap-5">
+          <div className="flex relative flex-col gap-5">
             <button
               type="submit"
-              className="w-full p-3 rounded text-white bg-[#00C6BF]"
+              className="w-full p-3 rounded relative overflow-hidden group transition-colors duration-1000 text-white bg-[orangered]"
               disabled={sending}
             >
               {sending ? "Yuborilmoqda..." : "Оставить заявку"}
+              <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/70 to-white/0 translate-x-[-100%] translate-y-[100%] rotate-45 scale-150 opacity-0 transition-transform duration-1000 ease-out group-hover:translate-x-[150%] group-hover:translate-y-[-150%] group-hover:opacity-100 pointer-events-none"></span>
             </button>
 
             <div className="relative">
@@ -222,8 +223,10 @@ export default function FormSend() {
                   onChange={handleChange("policy")}
                   onBlur={handleBlur("policy")}
                 />
-                Отправляя заявку, вы соглашаетесь на нашу политику
-                конфиденциальности
+                <span className="mt-[-5px]">
+                  Отправляя заявку, вы соглашаетесь на нашу политику
+                  конфиденциальности
+                </span>
               </label>
               {touched.policy && errors.policy && (
                 <p className="text-red-500 text-sm absolute left-0 -bottom-5">
