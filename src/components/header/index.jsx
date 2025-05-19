@@ -46,24 +46,24 @@ const Header = () => {
               <a href="mailto:revmacenter01@gmail.com" className="">
                 revmacenter01@gmail.com
               </a>
-              <a href="/contact" className=" ">
+              <Link to="/contact" className=" ">
                 Заказать звонок
-              </a>
+              </Link>
             </li>
 
             <li className=" flex-col hidden xl:flex">
               <a className="" href="/">
-                Кибрай тумани
+                Кибрайский район
               </a>
               <a href="/" className=" ">
-                Университет кучаси, 5/1.
+                Университетская ул., 5/1.
               </a>
             </li>
 
             <li className="hidden flex-col xl:flex">
               {/* O‘zbek tilidagi jadval – xl dan kichik ekranlarda ko‘rinadi */}
-              <span className="block">Душанба‑Жума: 08:00‑18:00</span>
-              <span className="block">Шанба: 08:00‑14:00</span>
+              <span className="block">понедельник-пятница 08:00‑18:00</span>
+              <span className="block">cуббота: 08:00‑14:00</span>
             </li>
 
             <li className="hidden md:flex lg:hidden">
@@ -97,41 +97,31 @@ const Header = () => {
                 className="font-bold inline-block text-[#017CC1] "
                 to={"/"}
               >
-                Направления
+                Главный
               </NavLink>
             </li>
             <li>
-              <NavLink className="font-bold inline-block  " to={"/"}>
+              <NavLink className="font-bold inline-block  " to={"/services"}>
                 Услуги
               </NavLink>
             </li>
             <li>
-              <NavLink className="font-bold inline-block  " to={"/"}>
+              <NavLink className="font-bold inline-block  " to={"/doctors"}>
                 Врачи
               </NavLink>
             </li>
             <li>
-              <NavLink className="font-bold inline-block  " to={"/"}>
+              <NavLink className="font-bold inline-block  " to={"/reviews"}>
                 Отзывы
               </NavLink>
             </li>
             <li>
-              <NavLink className="font-bold inline-block  " to={"/"}>
-                Акции
-              </NavLink>
-            </li>
-            <li>
-              <NavLink className="font-bold inline-block  " to={"/"}>
+              <NavLink className="font-bold inline-block  " to={"/about"}>
                 О центре
               </NavLink>
             </li>
             <li>
-              <NavLink className="font-bold inline-block  " to={"/"}>
-                Детство
-              </NavLink>
-            </li>
-            <li>
-              <NavLink className="font-bold inline-block  " to={"/"}>
+              <NavLink className="font-bold inline-block  " to={"/contact"}>
                 Контакты
               </NavLink>
             </li>
@@ -141,7 +131,7 @@ const Header = () => {
             <li>
               <Link
                 to="/contact"
-                className="relative inline-flex w-[196px] h-[46px] items-center justify-center overflow-hidden rounded-[5px] bg-[#111E52] px-4 py-2 font-medium text-white transition-colors duration-1000 group"
+                className="relative inline-flex w-[196px] h-[46px] items-center justify-center overflow-hidden rounded-[5px] bg-red-600 px-4 py-2 font-medium text-white transition-colors duration-1000 group"
               >
                 Запись на приём
                 <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/70 to-white/0 translate-x-[-100%] translate-y-[100%] rotate-45 scale-150 opacity-0 transition-transform duration-1000 ease-out group-hover:translate-x-[150%] group-hover:translate-y-[-150%] group-hover:opacity-100 pointer-events-none"></span>
@@ -167,29 +157,39 @@ const Header = () => {
             <a className=" text-[18px] font-bold" href="tel:+998998180111">
               +998(99) 818-01-11
             </a>
-            <a href="font-[300]" className="flex item-center gap-[10px]">
-              <FaWhatsappSquare className="text-[22px]" />
+            <a
+              href="https://wa.me/998180111"
+              className="flex item-center gap-[10px]"
+            >
+              <FaWhatsappSquare className="text-[22px] text-[#25D366]" />
               <span>Whatsapp</span>
             </a>
           </li>
           <li className="flex md:flex-col gap-[10px] xl:flex">
-            <a href="/">info@gormedcentre.ru</a>
-            <a href="/contact">Заказать звонок</a>
+            <a href="mailto:revmacenter01@gmail.com" className="">
+              revmacenter01@gmail.com
+            </a>
+            <Link onClick={() => setIsOpen(false)} to="/contact" className=" ">
+              Заказать звонок
+            </Link>
           </li>
           <li className="flex md:flex-col gap-[10px] xl:flex">
-            <a href="/">г. Мытищи,</a>
-            <a href="/">ул.Рождественская, д.7</a>
+            <a href="/">Кибрайский район,</a>
+            <a href="/">Университетская ул., 5/1.</a>
           </li>
-          <li className="flex md:flex-col gap-[10px]">
-            <span>Ежедневно:</span>
-            <span>с 9.00 до 21.00</span>
+          <li className="flex flex-col gap-[10px]">
+              {/* O‘zbek tilidagi jadval – xl dan kichik ekranlarda ko‘rinadi */}
+              <span className="block">понедельник-пятница: 08:00‑18:00</span>
+              <span className="block">cуббота: 08:00‑14:00</span>
           </li>
         </ul>
 
         <ul className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 lg:hidden p-[10px] lg:pl-[100px] container mx-auto items-center gap-[20px]">
           {links.map(({ text, href }, idx) => (
             <li key={idx}>
-              <NavLink className="font-bold ml-[10px] inline-block" to={href}>
+              <NavLink
+              onClick={() => setIsOpen(false)}
+              className="font-bold ml-[10px] inline-block" to={href}>
                 {text}
               </NavLink>
             </li>

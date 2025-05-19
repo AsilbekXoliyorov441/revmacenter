@@ -47,15 +47,21 @@ const Footer = () => {
         <div className="bottom-footer mt-[20px] xl:mt-[10px] container mx-auto  px-[20px]">
           <ul className="grid grid-cols-2 md:grid-cols-3 lg:flex  justify-between gap-[10px] sm:gap-[20px]">
             <li className="flex  flex-col gap-[15px] lg:gap-[10px]">
-              <a href="#whatsapp" className="flex item-center gap-[10px]">
-                <FaWhatsappSquare className="text-[22px]" />
+              <a
+                href="https://wa.me/998998180111"
+                className="flex item-center gap-[10px]"
+              >
+                <FaWhatsappSquare className="text-[22px] text-[#25D366]" />
                 <span className="">
                   <span className="hidden sm:inline-block">Написать в</span>{" "}
                   Whatsapp
                 </span>
               </a>
-              <a href="#telegram" className="flex item-center gap-[10px]">
-                <FaTelegram className="text-[22px]" />
+              <a
+                href="https://t.me/revma_center_clinic"
+                className="flex item-center gap-[10px]"
+              >
+                <FaTelegram className="text-[22px] text-blue-400" />
 
                 <span className="">
                   <span className="hidden sm:inline-block">Написать в</span>{" "}
@@ -65,13 +71,13 @@ const Footer = () => {
             </li>
             <li className="flex flex-col gap-[10px] sm:gap-0">
               <a
-                className="text-[18px] sm:text-[24px] font-[500]"
+                className="text-[18px] sm:text-[18px] font-[500]"
                 href="tel:+998998180111"
               >
                 +998(99) 818-01-11
               </a>
               <a
-                className="text-[18px] sm:text-[24px] font-[500]"
+                className="text-[18px] sm:text-[18px] font-[500]"
                 href="tel:+998998180111"
               >
                 +998(99) 818-01-11
@@ -92,13 +98,22 @@ const Footer = () => {
                 to="/contact"
               >
                 Заказать{" "}
-                <span className="hidden md:inline-block">обратный звонок</span>
+                <span className="hidden xl:inline-block">обратный звонок</span>
               </Link>
+            </li>
+            <li className="flex flex-col gap-[10px] sm:gap-0">
+              <img
+                className="w-[100px] h-[100px]"
+                src="/krcode.png"
+                alt="krcode"
+              />
             </li>
           </ul>
         </div>
       </footer>
-      <span className="text-center flex justify-center items-center py-[10px] ">© 2011-2023 Городской Медицинский Центр. Все права защищены.</span>
+      <span className="text-center flex justify-center items-center py-[10px] ">
+        © 2011-2023 Городской Медицинский Центр. Все права защищены.
+      </span>
     </>
   );
 };
