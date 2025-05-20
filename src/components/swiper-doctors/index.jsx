@@ -91,7 +91,7 @@ const SwiperDoctors = ({ language = "Uz" }) => {
               <SwiperSlide key={doc.id}>
                 <Link
                   to="/doctors"
-                  className="relative sm:justify-center mx-auto flex items-center justify-center overflow-hidden rounded-[5px] bg-red-300 hover:bg-red-500  max-w-[400px] font-medium text-white transition-colors duration-1000 group"
+                  className="relative sm:justify-center mx-auto flex items-center justify-center overflow-hidden rounded-[5px] bg-black/30 hover:bg-red-500  max-w-[400px] font-medium text-white transition-colors duration-1000 group"
                 >
                   <img
                     className="w-full h-[224px] object-cover"

@@ -203,7 +203,6 @@ export default function FormSend() {
               )}
             </div>
           </div>
-
           {/* SUBMIT & POLICY */}
           <div className="flex relative flex-col gap-5">
             <button
