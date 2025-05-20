@@ -84,8 +84,8 @@ const Footer = () => {
               </a>
             </li>
             <li className=" flex-col gap-[12px]  flex">
-              <a className="" href="/">
-                г. Мытищи, ул.Рождественская, д.7
+              <a className="" href="#map">
+                  Кибрайский район Университетская ул., 5/1.
               </a>
               <span className="flex text-[14px] sm:text-[16px] items-center gap-[5px]">
                 <span className="">Ежедневно</span>

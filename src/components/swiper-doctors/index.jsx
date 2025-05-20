@@ -56,7 +56,7 @@ const doctors = [
 
 const SwiperDoctors = ({ language = "Uz" }) => {
   return (
-    <section id="doctors" className="mt-[90px]">
+    <section id="doctors" className="pt-[90px] pb-[60px]">
       <div className="container mx-auto px-[20px]">
         <div className="relative">
           <h1 className="text-[24px] sm:text-[34px] md:text-[42px] mb-[20px] font-[700]">

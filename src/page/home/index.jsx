@@ -24,8 +24,8 @@ const HomePage = () => {
       <SwiperDoctors />
       <About />
 
-      <section id="map">
-        <div className="container mx-auto px-[20px] mt-[90px]">
+      <section id="map" className='pt-[90px]'>
+        <div className="container mx-auto px-[20px]">
           <h1 className="text-[24px] font-bold sm:text-[28px] leading-0  md:text-[36px] lg:text-[42px]">
             Как нас найти
           </h1>

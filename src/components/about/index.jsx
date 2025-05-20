@@ -7,9 +7,9 @@ const About = () => {
   return (
     <section
       id="about"
-      className="bg-gradient-to-r from-[black] to-[#8e0c0c]  bg-cover bg-center mt-[90px]"
+      className="bg-gradient-to-r from-[black] to-[#8e0c0c]  bg-cover bg-center pt-[60px] pb-[30px]"
     >
-      <div className="container mx-auto px-[20px] py-[60px]">
+      <div className="container mx-auto px-[20px] pb-[30px]">
         <div className="flex items-center justify-between">
           <h1 className="text-[24px] sm:text-[28px]   md:text-[36px] lg:text-[42px] text-white">
             Блог от наших специалистов
