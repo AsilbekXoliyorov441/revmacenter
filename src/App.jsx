@@ -7,10 +7,12 @@ import DoctorsPage from "./page/doctors";
 import Layout from "./components/layout";
 import ServicesPage from "./page/services";
 import ReviewsPage from "./page/reviews";
+import ScrollToTop from './components/scroll-top/index';
 
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<HomePage />} />
