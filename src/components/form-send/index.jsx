@@ -108,7 +108,7 @@ export default function FormSend() {
   };
 
   return (
-    <section id="form" className="pt-[60px] pb-[90px]">
+    <section id="form" className="pt-[30px] pb-[30px]">
       <div className="container bg-gradient-to-r from-[black] to-[#8e0c0c]  bg-cover bg-center p-14 rounded-[12px]">
         <h1 className="text-4xl font-bold text-white mb-6">
           Записаться на приём
