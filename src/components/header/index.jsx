@@ -35,16 +35,16 @@ const Header = () => {
                 </span>
               </a>
               <a
-                href=" font-[300] "
+                href="https://wa.me/998998180111"
                 className="hidden sm:flex item-center gap-[10px]"
               >
-                <FaWhatsappSquare className="text-[22px]" />
+                <FaWhatsappSquare className="text-[22px] text-[#25D366]" />
                 <span className="">Whatsapp</span>
               </a>
             </li>
             <li className=" flex-col hidden xl:flex">
-              <a className="" href="/">
-                info@gormedcentre.ru
+              <a href="mailto:revmacenter01@gmail.com" className="">
+                revmacenter01@gmail.com
               </a>
               <a href="/contact" className=" ">
                 Заказать звонок
@@ -53,16 +53,17 @@ const Header = () => {
 
             <li className=" flex-col hidden xl:flex">
               <a className="" href="/">
-                г. Мытищи,
+                Кибрай тумани
               </a>
               <a href="/" className=" ">
-                ул.Рождественская, д.7
+                Университет кучаси, 5/1.
               </a>
             </li>
 
-            <li className=" flex-col hidden xl:flex">
-              <span className="">Ежедневно</span>
-              <span className=" ">с 9.00 до 21.00</span>
+            <li className="hidden flex-col xl:flex">
+              {/* O‘zbek tilidagi jadval – xl dan kichik ekranlarda ko‘rinadi */}
+              <span className="block">Душанба‑Жума: 08:00‑18:00</span>
+              <span className="block">Шанба: 08:00‑14:00</span>
             </li>
 
             <li className="hidden md:flex lg:hidden">
