@@ -17,7 +17,7 @@ const HomePage = () => {
           content="This Medicine Hospital is based on curing revmatizim"
         />
       </Helmet>
-      <section className="pt-[120px]">
+      <section className="md:pt-[120px] pt-[60px]">
         <Hero />
       </section>
       <SwiperServices />

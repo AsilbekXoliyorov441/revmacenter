@@ -203,12 +203,11 @@ export default function FormSend() {
               )}
             </div>
           </div>
-
           {/* SUBMIT & POLICY */}
           <div className="flex relative flex-col gap-5">
             <button
               type="submit"
-              className="w-full p-3 rounded relative overflow-hidden group transition-colors duration-1000 text-white bg-[orangered]"
+              className="w-full p-3 rounded relative overflow-hidden group transition-colors duration-1000 text-white bg-red-600"
               disabled={sending}
             >
               {sending ? "Yuborilmoqda..." : "Оставить заявку"}

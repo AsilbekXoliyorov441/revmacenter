@@ -32,9 +32,13 @@ export default function Hero() {
                                 консультации и амбулаторное лечение у специалистов всех
                                 направлений, медицинские обследования и диагностические процедуры.
                             </p>
-                            <button className="bg-white text-red-600 hover:bg-red-100 font-semibold py-3 px-6 rounded-md transition">
-                                Записаться
-                            </button>
+                            <Link
+                                to="/contact"
+                                className="relative inline-flex  items-center justify-center overflow-hidden rounded-[5px] bg-white px-4 py-2 font-medium text-red-500 transition-colors duration-1000 group"
+                            >
+                                Записатсья
+                                <span className="absolute inset-0 bg-gradient-to-r from-[#780606]/0 via-[#780606]/70 to-[#780606]/0 translate-x-[-100%] translate-y-[100%] rotate-45 scale-100 opacity-0 transition-transform duration-2000 ease-out group-hover:translate-x-[150%] group-hover:translate-y-[-150%] group-hover:opacity-100 pointer-events-none"></span>
+                            </Link>
                         </div>
                         <div className="w-full md:w-1/2 flex justify-center">
                             <img
@@ -49,7 +53,7 @@ export default function Hero() {
 
                 {/* Cards */}
             </div>
-            <div className="container px-4 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-[-20px] md:mt-[-65px] relative z-10">
+            <div className="container px-4 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-[-20px] md:mt-[-50px] relative z-10">
                 {categories.map((category, index) => (
                     <div
                         key={index}
