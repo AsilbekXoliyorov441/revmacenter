@@ -94,7 +94,7 @@ const Header = () => {
           <ul className="flex items-center lg:gap-[30px] xl:gap-[60px]">
             <li>
               <NavLink
-                className="font-bold inline-block text-[#017CC1] "
+                className="font-bold inline-block"
                 to={"/"}
               >
                 Главный
