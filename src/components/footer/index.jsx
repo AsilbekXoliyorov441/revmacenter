@@ -85,11 +85,12 @@ const Footer = () => {
             </li>
             <li className=" flex-col gap-[12px]  flex">
               <a className="" href="#map">
-                  Кибрайский район Университетская ул., 5/1.
+                Кибрайский район Университетская ул., 5/1.
               </a>
               <span className="flex text-[14px] sm:text-[16px] items-center gap-[5px]">
-                <span className="">Ежедневно</span>
-                <span className=" ">с 9.00 до 21.00</span>
+                  {/* O‘zbek tilidagi jadval – xl dan kichik ekranlarda ko‘rinadi */}
+                  <span className="block">понедельник-пятница 08:00‑18:00</span>
+                  <span className="block">cуббота: 08:00‑14:00</span>
               </span>
             </li>
             <li className=" lg:flex">
@@ -112,7 +113,7 @@ const Footer = () => {
         </div>
       </footer>
       <span className="text-center flex justify-center items-center py-[10px] ">
-        © 2011-2023 Городской Медицинский Центр. Все права защищены.
+        © 2011-2023 Кибрайский район. Университетская ул., 5/1.. Все права защищены.
       </span>
     </>
   );

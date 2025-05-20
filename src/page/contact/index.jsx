@@ -56,18 +56,20 @@ const ContactPage = () => {
                 className=" text-[18px] xl:text-[22px] font-[700]"
                 href="#address"
               >
-                г. Мытищи, ул.Рождественская, д.7
+                Кибрайский район Университетская ул., 5/1.
               </a>
             </li>
             <li className="flex flex-col">
               <span className="text-[18px]">Режим работы:</span>
-              <span className=" text-[18px] xl:text-[22px] font-[700]">
-                ежедневно с 9.00 до 21.00
-              </span>
+              <li className="flex-col xl:flex">
+                {/* O‘zbek tilidagi jadval – xl dan kichik ekranlarda ko‘rinadi */}
+                <span className="block font-bold">понедельник-пятниц: 08:00‑18:00</span>
+                <span className="block font-bold">cуббота: 08:00‑14:00</span>
+              </li>
             </li>
           </ul>
 
-         <Map/>
+          <Map />
 
           <FormSend />
         </div>

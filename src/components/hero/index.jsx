@@ -71,7 +71,7 @@ export default function Hero() {
                         </div>
                         <Link
                             to="/contact"
-                            className="relative inline-flex  items-center justify-center overflow-hidden rounded-[5px] bg-[#111E52] px-4 py-2 font-medium text-white transition-colors duration-1000 group"
+                            className="relative inline-flex  items-center justify-center overflow-hidden rounded-[5px] bg-red-600 px-4 py-2 font-medium text-white transition-colors duration-1000 group"
                         >
                             Запись на приём
                             <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/70 to-white/0 translate-x-[-100%] translate-y-[100%] rotate-45 scale-150 opacity-0 transition-transform duration-1000 ease-out group-hover:translate-x-[150%] group-hover:translate-y-[-150%] group-hover:opacity-100 pointer-events-none"></span>
