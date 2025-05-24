@@ -44,7 +44,7 @@ const About = () => {
                 <img src={blog.image} alt={blog.title} />
                 <div className="card-content">
                   <h2>{blog.title}</h2>
-                  <p>{blog.desc}</p>
+                  <p>{blog.desc}</p>l 
                   <div className="author">
                     <img src={blog.avatar} alt={blog.author} />
                     <div>
