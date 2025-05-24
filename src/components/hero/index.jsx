@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { categories } from "../../data/links"
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 export default function Hero() {
+    const { t, i18n } = useTranslation();
     return (
         <section>
             <div className="relative">
@@ -25,18 +28,16 @@ export default function Hero() {
                     <div className="container mx-auto flex flex-col md:flex-row items-end md:items-center gap-10 pt-16">
                         <div className="w-full md:w-1/2 md:pb-[150px]">
                             <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                                Позаботьтесь о своём здоровье
+                                {t("hero.title")}
                             </h1>
                             <p className="text-lg mb-6 md:w-[550px]">
-                                Осуществляем комплексное медицинское обслуживание населения:
-                                консультации и амбулаторное лечение у специалистов всех
-                                направлений, медицинские обследования и диагностические процедуры.
+                                {t("hero.text")}
                             </p>
                             <Link
                                 to="/contact"
                                 className="relative inline-flex  items-center justify-center overflow-hidden rounded-[5px] bg-white px-4 py-2 font-medium text-red-500 transition-colors duration-1000 group"
                             >
-                                Записатсья
+                                {t("header.short")}
                                 <span className="absolute inset-0 bg-gradient-to-r from-[#780606]/0 via-[#780606]/70 to-[#780606]/0 translate-x-[-100%] translate-y-[100%] rotate-45 scale-100 opacity-0 transition-transform duration-2000 ease-out group-hover:translate-x-[150%] group-hover:translate-y-[-150%] group-hover:opacity-100 pointer-events-none"></span>
                             </Link>
                         </div>
