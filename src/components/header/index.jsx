@@ -3,13 +3,20 @@ import { Link, NavLink } from "react-router-dom";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { FaPhoneFlip } from "react-icons/fa6";
 import { links } from "../../data/links";
-
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen((prev) => !prev);
+  };
+
+  const { t, i18n } = useTranslation();
+  const changeLanguage = (lang) => {
+    console.log(lang);
+    i18n.changeLanguage(lang);
   };
   return (
     <>
@@ -39,7 +46,7 @@ const Header = () => {
                 className="hidden sm:flex item-center gap-[10px]"
               >
                 <FaWhatsappSquare className="text-[22px] text-[#25D366]" />
-                <span className="">Whatsapp</span>
+                <span className="">{t("header.whatsapp")}</span>
               </a>
             </li>
             <li className=" flex-col hidden xl:flex">
@@ -47,23 +54,23 @@ const Header = () => {
                 revmacenter01@gmail.com
               </a>
               <Link to="/contact" className=" ">
-                Заказать звонок
+                {t("header.orderCall")}
               </Link>
             </li>
 
             <li className=" flex-col hidden xl:flex">
               <a className="" href="/">
-                Кибрайский район
+                {t("header.location")}
               </a>
               <a href="/" className=" ">
-                Университетская ул., 5/1.
+                {t("header.address")}
               </a>
             </li>
 
             <li className="hidden flex-col xl:flex">
               {/* O‘zbek tilidagi jadval – xl dan kichik ekranlarda ko‘rinadi */}
-              <span className="block">понедельник-пятница 08:00‑18:00</span>
-              <span className="block">cуббота: 08:00‑14:00</span>
+              <span className="block">{t("header.weekday")}</span>
+              <span className="block">{t("header.saturday")}</span>
             </li>
 
             <li className="hidden md:flex lg:hidden">
@@ -71,7 +78,7 @@ const Header = () => {
                 className="w-[196px] h-[46px] flex items-center justify-center bg-[#111E52] rounded-[5px] text-white"
                 to="/contact"
               >
-                Запись на приём
+                {t("header.full")}
               </Link>
             </li>
 
@@ -93,39 +100,53 @@ const Header = () => {
         >
           <ul className="flex items-center lg:gap-[30px] xl:gap-[60px]">
             <li>
-              <NavLink
-                className="font-bold inline-block"
-                to={"/"}
-              >
-                Главный
+              <NavLink className="font-bold inline-block" to={"/"}>
+                {t("header.nav.home")}
               </NavLink>
             </li>
             <li>
               <NavLink className="font-bold inline-block  " to={"/services"}>
-                Услуги
+                {t("header.nav.services")}
               </NavLink>
             </li>
             <li>
               <NavLink className="font-bold inline-block  " to={"/doctors"}>
-                Врачи
+                {t("header.nav.doctors")}
               </NavLink>
             </li>
             <li>
               <NavLink className="font-bold inline-block  " to={"/reviews"}>
-                Отзывы
+                {t("header.nav.reviews")}
               </NavLink>
             </li>
             <li>
               <NavLink className="font-bold inline-block  " to={"/about"}>
-                О центре
+                {t("header.nav.about")}
               </NavLink>
             </li>
             <li>
               <NavLink className="font-bold inline-block  " to={"/contact"}>
-                Контакты
+                {t("header.nav.contact")}
               </NavLink>
             </li>
           </ul>
+          <select
+            value={i18n.language}
+            name=""
+            id=""
+            onChange={(e) => changeLanguage(e?.target.value)}
+            className="outline-0 text-gray-900 w-[70px] border-[1px] border-gray-700 hover:border-blue-500 rounded-md p-1"
+          >
+            <option className="opacity-5" value="uz">
+              Uz
+            </option>
+            <option className="" value="ru">
+              Ru
+            </option>
+            <option className="" value="en">
+              En
+            </option>
+          </select>
 
           <ul className="flex items-center gap-[10px]">
             <li>
@@ -133,7 +154,7 @@ const Header = () => {
                 to="/contact"
                 className="relative inline-flex w-[196px] h-[46px] items-center justify-center overflow-hidden rounded-[5px] bg-red-600 px-4 py-2 font-medium text-white transition-colors duration-1000 group"
               >
-                Запись на приём
+                {t("header.full")}
                 <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/70 to-white/0 translate-x-[-100%] translate-y-[100%] rotate-45 scale-150 opacity-0 transition-transform duration-1000 ease-out group-hover:translate-x-[150%] group-hover:translate-y-[-150%] group-hover:opacity-100 pointer-events-none"></span>
               </Link>
             </li>
@@ -170,38 +191,82 @@ const Header = () => {
               revmacenter01@gmail.com
             </a>
             <Link onClick={() => setIsOpen(false)} to="/contact" className=" ">
-              Заказать звонок
+              {t("header.orderCall")}
             </Link>
           </li>
           <li className="flex md:flex-col gap-[10px] xl:flex">
-            <a href="/">Кибрайский район,</a>
-            <a href="/">Университетская ул., 5/1.</a>
+            <a href="/"> {t("header.location")}</a>
+            <a href="/">{t("header.address")}</a>
           </li>
           <li className="flex flex-col gap-[10px]">
-              {/* O‘zbek tilidagi jadval – xl dan kichik ekranlarda ko‘rinadi */}
-              <span className="block">понедельник-пятница: 08:00‑18:00</span>
-              <span className="block">cуббота: 08:00‑14:00</span>
+            {/* O‘zbek tilidagi jadval – xl dan kichik ekranlarda ko‘rinadi */}
+            <span className="block">{t("header.weekday")}</span>
+            <span className="block">{t("header.saturday")}</span>
           </li>
         </ul>
 
         <ul className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 lg:hidden p-[10px] lg:pl-[100px] container mx-auto items-center gap-[20px]">
-          {links.map(({ text, href }, idx) => (
-            <li key={idx}>
-              <NavLink
-              onClick={() => setIsOpen(false)}
-              className="font-bold ml-[10px] inline-block" to={href}>
-                {text}
-              </NavLink>
-            </li>
-          ))}
+          <li onClick={()=> setIsOpen(false)}>
+            <NavLink className="font-bold inline-block" to={"/"}>
+              {t("header.nav.home")}
+            </NavLink>
+          </li>
+          <li onClick={()=> setIsOpen(false)}>
+            <NavLink className="font-bold inline-block  " to={"/services"}>
+              {t("header.nav.services")}
+            </NavLink>
+          </li>
+          <li onClick={()=> setIsOpen(false)}>
+            <NavLink className="font-bold inline-block  " to={"/doctors"}>
+              {t("header.nav.doctors")}
+            </NavLink>
+          </li>
+          <li onClick={()=> setIsOpen(false)}>
+            <NavLink className="font-bold inline-block  " to={"/reviews"}>
+              {t("header.nav.reviews")}
+            </NavLink>
+          </li>
+          <li onClick={()=> setIsOpen(false)}>
+            <NavLink className="font-bold inline-block  " to={"/about"}>
+              {t("header.nav.about")}
+            </NavLink>
+          </li>
+          <li onClick={()=> setIsOpen(false)}>
+            <NavLink className="font-bold inline-block  " to={"/contact"}>
+              {t("header.nav.contact")}
+            </NavLink>
+          </li>
 
           <li>
+            <select
+              value={i18n.language}
+              name=""
+              id=""
+              onChange={(e) => {
+                changeLanguage(e?.target.value);
+                setIsOpen(false)
+              }}
+              className="outline-0 text-gray-900 w-[70px] border-[1px] border-gray-700 hover:border-blue-500 rounded-md p-1"
+            >
+              <option className="opacity-5" value="uz">
+                Uz
+              </option>
+              <option className="" value="ru">
+                Ru
+              </option>
+              <option className="" value="en">
+                En
+              </option>
+            </select>
+          </li>
+
+          <li onClick={()=> setIsOpen(false)}>
             <Link
               to="/contact"
               className="max-w-[140px] md:w-[300px] h-[46px] flex items-center justify-center bg-[#111E52] rounded-[5px] text-white"
             >
-              <span className="hidden sm:block">Запись на приём</span>
-              <span className="block sm:hidden">Записаться</span>
+              <span className="hidden sm:block">{t("header.full")}</span>
+              <span className="block sm:hidden">{t("header.short")}</span>
             </Link>
           </li>
         </ul>

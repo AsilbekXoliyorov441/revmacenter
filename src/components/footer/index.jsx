@@ -2,8 +2,11 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { links } from "../../data/links";
 import { FaTelegram, FaWhatsappSquare } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
 const Footer = () => {
+  const { t, i18n } = useTranslation();
   return (
     <>
       <footer className="bg-[#F0F6F9] pt-[30px] pb-[30px] mt-4">
@@ -33,13 +36,36 @@ const Footer = () => {
                   loading="lazy"
                 />
               </Link>
-              {links?.map(({ text, href }, idx) => (
-                <li key={idx}>
-                  <NavLink className="font-bold  inline-block" to={href}>
-                    {text}
-                  </NavLink>
-                </li>
-              ))}
+              <li>
+                <NavLink className="font-bold inline-block" to={"/"}>
+                  {t("header.nav.home")}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className="font-bold inline-block  " to={"/services"}>
+                  {t("header.nav.services")}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className="font-bold inline-block  " to={"/doctors"}>
+                  {t("header.nav.doctors")}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className="font-bold inline-block  " to={"/reviews"}>
+                  {t("header.nav.reviews")}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className="font-bold inline-block  " to={"/about"}>
+                  {t("header.nav.about")}
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className="font-bold inline-block  " to={"/contact"}>
+                  {t("header.nav.contact")}
+                </NavLink>
+              </li>
             </ul>
           </div>
         </div>
@@ -53,7 +79,7 @@ const Footer = () => {
               >
                 <FaWhatsappSquare className="text-[22px] text-[#25D366]" />
                 <span className="">
-                  <span className="hidden sm:inline-block">Написать в</span>{" "}
+                  <span className="hidden sm:inline-block">{t("footer.writeTo")}</span>{" "}
                   Whatsapp
                 </span>
               </a>
@@ -64,8 +90,8 @@ const Footer = () => {
                 <FaTelegram className="text-[22px] text-blue-400" />
 
                 <span className="">
-                  <span className="hidden sm:inline-block">Написать в</span>{" "}
-                  Tелеграм
+                  <span className="hidden sm:inline-block">{t("footer.writeTo")}</span>{" "}
+                  {t("footer.telegram")}
                 </span>
               </a>
             </li>
@@ -85,12 +111,12 @@ const Footer = () => {
             </li>
             <li className=" flex-col gap-[12px]  flex">
               <a className="" href="#map">
-                Кибрайский район Университетская ул., 5/1.
+                {t("header.location")} {t("header.address")}
               </a>
               <span className="flex text-[14px] sm:text-[16px] items-center gap-[5px]">
-                  {/* O‘zbek tilidagi jadval – xl dan kichik ekranlarda ko‘rinadi */}
-                  <span className="block">понедельник-пятница 08:00‑18:00</span>
-                  <span className="block">cуббота: 08:00‑14:00</span>
+                {/* O‘zbek tilidagi jadval – xl dan kichik ekranlarda ko‘rinadi */}
+                <span className="block">{t("header.weekday")}</span>
+                <span className="block">{t("header.saturday")}</span>
               </span>
             </li>
             <li className=" lg:flex">
@@ -98,8 +124,7 @@ const Footer = () => {
                 className=" max-w-[272px] lg:px-[20px] h-[46px] flex items-center justify-center bg-[#E3EFF5] rounded-[5px] "
                 to="/contact"
               >
-                Заказать{" "}
-                <span className="hidden xl:inline-block">обратный звонок</span>
+                {t("footer.callback")}
               </Link>
             </li>
             <li className="flex flex-col gap-[10px] sm:gap-0">
@@ -113,7 +138,7 @@ const Footer = () => {
         </div>
       </footer>
       <span className="text-center flex justify-center items-center py-[10px] ">
-        © 2011-2023 Кибрайский район. Университетская ул., 5/1.. Все права защищены.
+        {t("footer.text")}
       </span>
     </>
   );

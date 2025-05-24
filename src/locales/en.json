@@ -1,0 +1,33 @@
+{
+  "header": {
+    "orderCall": "Request a call",
+    "location": "Kibray District",
+    "address": "University St., 5/1",
+    "weekday": "Monday-Friday: 08:00‑18:00",
+    "saturday": "Saturday: 08:00‑14:00",
+    "full": "Book an Appointment",
+    "short": "Book Now",
+    "nav": {
+      "home": "Home",
+      "services": "Services",
+      "doctors": "Doctors",
+      "reviews": "Reviews",
+      "about": "About Center",
+      "contact": "Contact"
+    },
+    "whatsapp": "Whatsapp"
+  },
+   "footer":{
+    "writeTo": "Write to",
+    "telegram":"Telegram",
+    "callback": "Request a callback",
+    "text": "© 2011–2023 Kibray District. Universitet Street, 5/1. All rights reserved."
+  },
+    "about":{
+    "title1":"en"
+  },
+    "hero": {
+    "title": "Take care of your health",
+    "text": "We provide comprehensive medical services to the population: consultations and outpatient treatment by specialists in all fields, medical examinations, and diagnostic procedures."
+  }
+}

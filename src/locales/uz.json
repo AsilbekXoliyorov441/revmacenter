@@ -1,0 +1,33 @@
+{
+  "header": {
+    "orderCall": "Buyurtma qilish",
+    "location": "Qibray tumani",
+    "address": "Universitet ko‘chasi, 5/1",
+    "weekday": "Dushanba-Juma: 08:00‑18:00",
+    "saturday": "Shanba: 08:00‑14:00",
+    "full": "Qabulga yozilish",
+    "short": "Yozilish",
+    "nav": {
+      "home": "Bosh sahifa",
+      "services": "Xizmatlar",
+      "doctors": "Shifokorlar",
+      "reviews": "Sharhlar",
+      "about": "Markaz haqida",
+      "contact": "Bog‘lanish"
+    },
+    "whatsapp": "Whatsapp"
+  },
+  "footer":{
+    "writeTo": "Yozish",
+    "telegram":"Telegram",
+    "callback": "Qo‘ng‘iroqni so‘rash",
+    "text": "© 2011–2023 Qibray tumani. Universitet ko‘chasi, 5/1. Barcha huquqlar himoyalangan."
+  },
+    "about":{
+    "title1":"uz"
+  },
+    "hero": {
+    "title": "Sog‘lig‘ingizga e’tibor bering",
+    "text": "Aholiga keng qamrovli tibbiy xizmatlar ko‘rsatamiz: barcha yo‘nalishlardagi mutaxassislar maslahatlari va ambulator davolash, tibbiy ko‘rik va diagnostika jarayonlari."
+  }
+}
