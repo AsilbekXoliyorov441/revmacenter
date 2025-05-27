@@ -88,9 +88,9 @@ const Footer = () => {
                 Кибрайский район Университетская ул., 5/1.
               </a>
               <span className="flex text-[14px] sm:text-[16px] items-center gap-[5px]">
-                  {/* O‘zbek tilidagi jadval – xl dan kichik ekranlarda ko‘rinadi */}
-                  <span className="block">понедельник-пятница 08:00‑18:00</span>
-                  <span className="block">cуббота: 08:00‑14:00</span>
+                {/* O‘zbek tilidagi jadval – xl dan kichik ekranlarda ko‘rinadi */}
+                <span className="block">понедельник-пятница 08:00‑18:00</span>
+                <span className="block">cуббота: 08:00‑14:00</span>
               </span>
             </li>
             <li className=" lg:flex">
@@ -112,9 +112,10 @@ const Footer = () => {
           </ul>
         </div>
       </footer>
-      <span className="text-center flex justify-center items-center py-[10px] ">
-        © 2011-2023 Кибрайский район. Университетская ул., 5/1.. Все права защищены.
+      <span className="text-center flex justify-center items-center py-[10px]">
+        © 2011–{new Date().getFullYear()} Кибрайский район. Университетская ул., 5/1. Все права защищены.
       </span>
+
     </>
   );
 };
