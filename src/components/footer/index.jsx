@@ -140,6 +140,7 @@ const Footer = () => {
       <span className="text-center flex justify-center items-center py-[10px] ">
         {t("footer.text")}
       </span>
+
     </>
   );
 };

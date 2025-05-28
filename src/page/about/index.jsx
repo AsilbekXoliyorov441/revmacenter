@@ -7,7 +7,53 @@ import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Map from '../../components/map';
 import FormSend from '../../components/form-send';
+import { HeartPulse, Syringe, Microscope, MonitorCheck, UserCheck, ShieldCheck, Clock, Puzzle } from 'lucide-react';
 
+const features = [
+  {
+    icon: <Microscope className="w-6 h-6 text-indigo-600" />,
+    title: 'Лабораторные исследования',
+    description: 'Полный спектр анализов для точной диагностики',
+  },
+  {
+    icon: <MonitorCheck className="w-6 h-6 text-indigo-600" />,
+    title: 'УЗИ-диагностика',
+    description: 'Современные аппараты и опытные специалисты',
+  },
+  {
+    icon: <HeartPulse className="w-6 h-6 text-indigo-600" />,
+    title: 'ЭхоКГ (УЗИ сердца)',
+    description: 'Неинвазивная оценка состояния сердца',
+  },
+  {
+    icon: <Syringe className="w-6 h-6 text-indigo-600" />,
+    title: 'Процедурный кабинет',
+    description: 'Инъекции, капельницы, блокадная терапия и др.',
+  },
+];
+
+const reasons = [
+  {
+    icon: <UserCheck className="w-6 h-6 text-green-600" />,
+    title: 'Узкопрофильные врачи-ревматологи',
+    description: 'С большим клиническим опытом',
+  },
+  {
+    icon: <Puzzle className="w-6 h-6 text-green-600" />,
+    title: 'Индивидуальный подход',
+    description: 'К каждому пациенту',
+  },
+  {
+    icon: <ShieldCheck className="w-6 h-6 text-green-600" />,
+    title: 'Высокая точность диагностики',
+    description: '',
+  },
+  {
+    icon: <Clock className="w-6 h-6 text-green-600" />,
+    title: 'Удобное время приёма',
+    description: 'И минимальное ожидание',
+  },
+];
 const AboutPage = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
   return (
@@ -36,17 +82,47 @@ const AboutPage = () => {
 
       {/* Main Content */}
       <div className="prose max-w-6xl mx-auto px-4 sm:px-6 py-6">
-        <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6">
-          Городской Медицинский Центр – это многопрофильное амбулаторно-поликлиническое учреждение для детей и взрослых в городе Мытищи. Мы предоставляем платные медицинские услуги и занимаем лидирующие позиции среди медицинских учреждений города Мытищи. У нас ежегодно обслуживаются более 150000 пациентов.
+        <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 font-bold">
+          Revma Center Clinic — Клиника для вашего здоровья и движения
         </p>
 
         <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6">
-          Городской Медицинский Центр в Мытищах осуществляет комплексное медицинское обслуживание населения. Действует собственная служба круглосуточной скорой медицинской помощи, детские и взрослые отделения, рентгенологическое отделение, отделение функциональной диагностики, эндоскопия, собственная лаборатория, а также клиники стоматологии и косметологии. В Городском Медицинском Центре работает медицинская комиссия для определения профпригодности работника, проведения профилактических осмотров, выдачи медицинских справок.
+          Revma Center Clinic — это специализированная медицинская клиника, занимающаяся диагностикой и лечением ревматологических заболеваний у взрослых и детей. Мы успешно объединяем передовые технологии, современное оборудование и опыт врачей, чтобы обеспечить нашим пациентам высокий уровень медицинской помощи.
         </p>
 
         <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6">
-          Организация лечебно-диагностической работы в Городском Медицинском Центре соответствует строгим требованиям, предъявляемым к медицинским учреждениям. Уровень медицинских работников ежегодно повышается путем современных тренингов, конференций и др. тематических мероприятий; еженедельно проводится внутренний контроль качества оказания медицинской помощи. Клинический разбор истории болезни позволяет не только общаться врачам друг с другом, но и более точно поставить диагноз и услышать дополнительное мнение коллег по данному пациенту. В Городском Медицинском Центре представлен весь комплекс поликлинических услуг для пациентов любых возрастов.
+          Ежегодно в клинике обслуживаются сотни пациентов, страдающих от болезней суставов, соединительной ткани и аутоиммунных заболеваний. Мы предлагаем полный цикл амбулаторно-диагностических услуг — от первичной консультации до комплексного наблюдения и лечения.
         </p>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 py-2">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">Наши возможности</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {features.map((item, idx) => (
+            <div key={idx} className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition-all">
+              <div className="flex justify-center mb-4">{item.icon}</div>
+              <h3 className="text-lg font-semibold text-gray-700">{item.title}</h3>
+              <p className="text-sm text-gray-500 mt-2">{item.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">Почему выбирают нас</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {reasons.map((item, idx) => (
+            <div key={idx} className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition-all">
+              <div className="flex justify-center mb-4">{item.icon}</div>
+              <h3 className="text-lg font-semibold text-gray-700">{item.title}</h3>
+              <p className="text-sm text-gray-500 mt-2">{item.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 text-center">
+          <p className="text-xl text-gray-700 font-medium max-w-2xl mx-auto">
+            В <span className="font-semibold text-indigo-600">Revma Center Clinic</span> мы не просто лечим — мы восстанавливаем качество жизни. Наш приоритет — здоровье ваших суставов, свобода движения и долгосрочный результат.
+          </p>
+        </div>
       </div>
 
       {/* Image Slider */}
@@ -192,8 +268,8 @@ const AboutPage = () => {
         </div>
       </div>
       <div className='max-w-6xl mx-auto'>
-        <Map/>
-        <FormSend/>
+        <Map />
+        <FormSend />
       </div>
     </div>
   )

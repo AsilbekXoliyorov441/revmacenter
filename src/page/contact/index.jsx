@@ -45,9 +45,9 @@ const ContactPage = () => {
               <span className="text-[18px]">E-mail:</span>
               <a
                 className=" text-[18px] xl:text-[22px] font-[700]"
-                href="aslibekxoliyorov441@gmail.com"
+                href="https://mailto:revmacenter01@gmail.com"
               >
-                info@gormedcentre.ru
+                revmacenter01@gmail.com
               </a>
             </li>
             <li className="flex flex-col">
