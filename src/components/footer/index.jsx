@@ -52,11 +52,6 @@ const Footer = () => {
                 </NavLink>
               </li>
               <li>
-                <NavLink className="font-bold inline-block  " to={"/reviews"}>
-                  {t("header.nav.reviews")}
-                </NavLink>
-              </li>
-              <li>
                 <NavLink className="font-bold inline-block  " to={"/about"}>
                   {t("header.nav.about")}
                 </NavLink>
@@ -133,6 +128,7 @@ const Footer = () => {
                 src="/krcode.png"
                 alt="krcode"
               />
+              <span className="text-[12px] font-bold">Manzil: Skanerlang </span>
             </li>
           </ul>
         </div>

@@ -114,11 +114,11 @@ const Header = () => {
                 {t("header.nav.doctors")}
               </NavLink>
             </li>
-            <li>
+            {/* <li>
               <NavLink className="font-bold inline-block  " to={"/reviews"}>
                 {t("header.nav.reviews")}
               </NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink className="font-bold inline-block  " to={"/about"}>
                 {t("header.nav.about")}
@@ -130,25 +130,27 @@ const Header = () => {
               </NavLink>
             </li>
           </ul>
-          <select
-            value={i18n.language}
-            name=""
-            id=""
-            onChange={(e) => changeLanguage(e?.target.value)}
-            className="outline-0 text-gray-900 w-[70px] border-[1px] border-gray-700 hover:border-blue-500 rounded-md p-1"
-          >
-            <option className="opacity-5" value="uz">
-              Uz
-            </option>
-            <option className="" value="ru">
-              Ru
-            </option>
-            <option className="" value="en">
-              En
-            </option>
-          </select>
 
           <ul className="flex items-center gap-[10px]">
+            <li className="bg-red-600 hover:bg-gradient-to-r hover:from-[red] to-[#970101] transition-colors duration-500 overflow-hidden rounded-[4px] h-[46px]">
+              <select
+                value={i18n.language}
+                name=""
+                id=""
+                onChange={(e) => changeLanguage(e?.target.value)}
+                className="outline-0  w-[100px] border-none     text-white font-bold h-full border-[1px] border-gray-700 hover:bg-gradient-to-r hover:from-[red] to-[#970101] rounded-md p-1"
+              >
+                <option className=" text-red-600 opacity-5" value="uz">
+                  Uz
+                </option>
+                <option className=" text-red-600 " value="ru">
+                  Ru
+                </option>
+                <option className=" text-red-600 " value="en">
+                  En
+                </option>
+              </select>
+            </li>
             <li>
               <Link
                 to="/contact"
@@ -206,61 +208,67 @@ const Header = () => {
         </ul>
 
         <ul className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 lg:hidden p-[10px] lg:pl-[100px] container mx-auto items-center gap-[20px]">
-          <li onClick={()=> setIsOpen(false)}>
+          <li onClick={() => setIsOpen(false)}>
             <NavLink className="font-bold inline-block" to={"/"}>
               {t("header.nav.home")}
             </NavLink>
           </li>
-          <li onClick={()=> setIsOpen(false)}>
+          <li onClick={() => setIsOpen(false)}>
             <NavLink className="font-bold inline-block  " to={"/services"}>
               {t("header.nav.services")}
             </NavLink>
           </li>
-          <li onClick={()=> setIsOpen(false)}>
+          <li onClick={() => setIsOpen(false)}>
             <NavLink className="font-bold inline-block  " to={"/doctors"}>
               {t("header.nav.doctors")}
             </NavLink>
           </li>
-          <li onClick={()=> setIsOpen(false)}>
+          {/* <li onClick={()=> setIsOpen(false)}>
             <NavLink className="font-bold inline-block  " to={"/reviews"}>
               {t("header.nav.reviews")}
             </NavLink>
-          </li>
-          <li onClick={()=> setIsOpen(false)}>
+          </li> */}
+          <li onClick={() => setIsOpen(false)}>
             <NavLink className="font-bold inline-block  " to={"/about"}>
               {t("header.nav.about")}
             </NavLink>
           </li>
-          <li onClick={()=> setIsOpen(false)}>
+          <li onClick={() => setIsOpen(false)}>
             <NavLink className="font-bold inline-block  " to={"/contact"}>
               {t("header.nav.contact")}
             </NavLink>
           </li>
 
-          <li>
+          <li className="bg-red-600 w-[64px] hover:bg-gradient-to-r hover:from-[red] to-[#970101] transition-colors duration-500 overflow-hidden rounded-[4px] h-[46px]">
             <select
               value={i18n.language}
               name=""
               id=""
-              onChange={(e) => {
-                changeLanguage(e?.target.value);
-                setIsOpen(false)
-              }}
-              className="outline-0 text-gray-900 w-[70px] border-[1px] border-gray-700 hover:border-blue-500 rounded-md p-1"
+              onChange={(e) => changeLanguage(e?.target.value)}
+              className="outline-0  w-[60px] border-none     text-white font-bold h-full border-[1px] border-gray-700 hover:bg-gradient-to-r hover:from-[red] to-[#970101] rounded-md p-1"
             >
-              <option className="opacity-5" value="uz">
+              <option
+                            onClick={() => setIsOpen(false)}
+
+              className=" text-red-600 opacity-5" value="uz">
                 Uz
               </option>
-              <option className="" value="ru">
+              <option
+                            onClick={() => setIsOpen(false)}
+
+              className=" text-red-600 " value="ru">
                 Ru
               </option>
-              <option className="" value="en">
+              <option
+                            onClick={() => setIsOpen(false)}
+
+              className=" text-red-600 " value="en">
                 En
               </option>
             </select>
           </li>
 
-          <li onClick={()=> setIsOpen(false)}>
+          <li onClick={() => setIsOpen(false)}>
             <Link
               to="/contact"
               className="max-w-[140px] md:w-[300px] h-[46px] flex items-center justify-center bg-[#111E52] rounded-[5px] text-white"
