@@ -5,53 +5,58 @@ import { Navigation } from "swiper/modules";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import "swiper/css";
 
-const doctors = [
+export const doctors = [
   {
     id: 1,
-    firstName: "Dilshod",
-    lastName: "Rahimov",
-    specialtyUz: "Кардиолог",
-    specialtyRu: "Кардиолог",
-    specialtyEn: "Cardiologist",
-    image: "/images/doctors/doc-1.png",
+    image: "/unknown.webp",
+    titleEn: "Yusupov Sunnatilla Abdumalikovich",
+    titleRu: "Юсупов Суннатилла Абдумаликович",
+    titleUz: "Yusupov Sunnatilla Abdumalikovich",
+    specializationEn: "ENT specialist",
+    specializationRu: "ЛОР",
+    specializationUz: "LOR shifokori",
   },
   {
     id: 2,
-    firstName: "Malika",
-    lastName: "Saidova",
-    specialtyUz: "Невролог",
-    specialtyRu: "Невролог",
-    specialtyEn: "Neurologist",
-    image: "/images/doctors/doc-2.png",
+    image: "/unknown.webp",
+    titleEn: "Akbarhodjaeva Munira Ramatkhojaevna",
+    titleRu: "Акбарходажева Мунира Раматходжаевна",
+    titleUz: "Akbarxo‘jayeva Munira Ramatxo‘jayevna",
+    specializationEn: "Cardiorheumatologist. Pediatrician",
+    specializationRu: "Кардирематолог. Педиатр",
+    specializationUz: "Kardioromatolog. Pediatr",
   },
   {
     id: 3,
-    firstName: "Javlon",
-    lastName: "Akbarov",
-    specialtyUz: "Гинеколог",
-    specialtyRu: "Гинеколог",
-    specialtyEn: "Gynecologist",
-    image: "/images/doctors/doc-3.png",
+    image: "/unknown.webp",
+    titleEn: "Jalolhodjaeva Malika Kozimkhonovna",
+    titleRu: "Жалолходжева Малика Козимхоновна",
+    titleUz: "Jalolxo‘jayeva Malika Qozimxonovna",
+    specializationEn: "Rheumatologist",
+    specializationRu: "Ревматолог",
+    specializationUz: "Revmatolog",
   },
   {
-    id: 2,
-    firstName: "Malika",
-    lastName: "Saidova",
-    specialtyUz: "Невролог",
-    specialtyRu: "Невролог",
-    specialtyEn: "Neurologist",
-    image: "/images/doctors/doc-4.png",
+    id: 4,
+    image: "/unknown.webp",
+    titleEn: "Mukhdinova Zulaykho Nurillaevna",
+    titleRu: "Мухиддинова Зулайхо Нуриллаевна",
+    titleUz: "Muxiddinova Zulayho Nurillayevna",
+    specializationEn: "Ultrasound diagnostics",
+    specializationRu: "УЗИ диагностики",
+    specializationUz: "UZI diagnostikasi",
   },
+
   {
-    id: 3,
-    firstName: "Javlon",
-    lastName: "Akbarov",
-    specialtyUz: "Гинеколог",
-    specialtyRu: "Гинеколог",
-    specialtyEn: "Gynecologist",
-    image: "/images/doctors/doc-1.png",
+    id: 5,
+    image: "/unknown.webp",
+    titleEn: "Магдиева Муборак",
+    titleRu: "Магдиева Муборак",
+    titleUz: "Магдиева Муборак",
+    specializationEn: "Педиатр",
+    specializationRu: "Педиатр",
+    specializationUz: "Педиатр",
   },
-  // qo‘shimcha shifokorlarni qo‘shing
 ];
 
 const SwiperDoctors = ({ language = "Uz" }) => {
@@ -94,17 +99,17 @@ const SwiperDoctors = ({ language = "Uz" }) => {
                   className="relative sm:justify-center mx-auto flex items-center justify-center overflow-hidden rounded-[5px] bg-black/30 hover:bg-red-500  max-w-[400px] font-medium text-white transition-colors duration-1000 group"
                 >
                   <img
-                    className="w-full h-[224px] object-cover"
+                    className=" h-[224px] w-[50%] object-cover"
                     src={doc.image}
                     alt={`${doc.firstName} ${doc.lastName}`}
                   />
 
-                  <div className="px-4 flex flex-col justify-between h-[200px] pb-[20px]">
+                  <div className="px-4 w-[60%] flex flex-col justify-between h-[200px] pb-[20px]">
                     <p className="text-[20px] font-bold mt-[20px]">
-                      {doc.firstName} {doc.lastName}
+                      {doc.titleRu} {doc.lastName}
                     </p>
                     <span className="text-[#017CC1] mb-[12px]">
-                      {doc[`specialty${language}`]}
+                      {doc.specializationRu}
                     </span>
                   </div>
                   <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/70 to-white/0 -translate-x-full translate-y-full rotate-45 scale-150 opacity-0 transition-transform duration-1000 ease-out group-hover:translate-x-[150%] group-hover:-translate-y-[150%] group-hover:opacity-100 pointer-events-none" />

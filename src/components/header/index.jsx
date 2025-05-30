@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { FaPhoneFlip } from "react-icons/fa6";
-import { links } from "../../data/links";
+// import { links } from "../../data/links";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 

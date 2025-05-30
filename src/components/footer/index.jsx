@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { links } from "../../data/links";
+// import { links } from "../../data/links";
 import { FaTelegram, FaWhatsappSquare } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";

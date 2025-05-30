@@ -31,7 +31,7 @@ const ServicesSwiper = () => {
   };
 
   return (
-    <div className="relative w-full h-full md:h-[75vh]  mt-[60px] lg:mt-[120px]">
+    <div className="relative w-full h-full md:h-[75vh]  lg:mt-[120px]">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}

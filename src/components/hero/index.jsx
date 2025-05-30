@@ -54,7 +54,7 @@ export default function Hero() {
 
                 {/* Cards */}
             </div>
-            <div className="container px-4 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-[-20px] md:mt-[-50px] relative z-10">
+            <div className="container px-4 mx-auto grid grid-cols-1 sm:grid-cols-2  gap-6 mt-[-20px] md:mt-[-50px] relative z-10">
                 {categories.map((category, index) => (
                     <div
                         key={index}
@@ -64,7 +64,7 @@ export default function Hero() {
                             <h3 className="text-xl font-semibold mb-3 border-b pb-2">
                                 {category.title}
                             </h3>
-                            <ul className="text-gray-800 space-y-1 mb-6">
+                            <ul className="text-gray-800 space-y-1 grid lg:grid-cols-2 mb-6">
                                 {category.items.map((item, idx) => (
                                     <li className="mb-4" key={idx}>{item}</li>
                                 ))}
