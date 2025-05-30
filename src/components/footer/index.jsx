@@ -71,6 +71,7 @@ const Footer = () => {
               <a
                 href="https://wa.me/998998180111"
                 className="flex item-center gap-[10px]"
+                
               >
                 <FaWhatsappSquare className="text-[22px] text-[#25D366]" />
                 <span className="">
@@ -112,7 +113,8 @@ const Footer = () => {
                 {/* O‘zbek tilidagi jadval – xl dan kichik ekranlarda ko‘rinadi */}
                 <span className="block">{t("header.weekday")}</span>
                 <span className="block">{t("header.saturday")}</span>
-              </span>
+              </span> 
+  
             </li>
             <li className=" lg:flex">
               <Link

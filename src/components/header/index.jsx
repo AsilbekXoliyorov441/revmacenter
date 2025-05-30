@@ -105,6 +105,11 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
+              <NavLink className="font-bold inline-block  " to={"/about"}>
+                {t("header.nav.about")}
+              </NavLink>
+            </li>
+            <li>
               <NavLink className="font-bold inline-block  " to={"/services"}>
                 {t("header.nav.services")}
               </NavLink>
@@ -119,11 +124,6 @@ const Header = () => {
                 {t("header.nav.reviews")}
               </NavLink>
             </li> */}
-            <li>
-              <NavLink className="font-bold inline-block  " to={"/about"}>
-                {t("header.nav.about")}
-              </NavLink>
-            </li>
             <li>
               <NavLink className="font-bold inline-block  " to={"/contact"}>
                 {t("header.nav.contact")}
@@ -168,11 +168,10 @@ const Header = () => {
         className={`
         fixed top-[83px] lg:top-[143px] w-full z-50 
         bg-[#FFD9D9] transition-all duration-300 ease-in-out 
-        ${
-          isOpen
+        ${isOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
-        }
+          }
       `}
       >
         <ul className="grid sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 p-[10px] lg:pl-[100px] container mx-auto items-center gap-[20px] lg:gap-[60px]">
@@ -248,21 +247,21 @@ const Header = () => {
               className="outline-0  w-[60px] border-none     text-white font-bold h-full border-[1px] border-gray-700 hover:bg-gradient-to-r hover:from-[red] to-[#970101] rounded-md p-1"
             >
               <option
-                            onClick={() => setIsOpen(false)}
+                onClick={() => setIsOpen(false)}
 
-              className=" text-red-600 opacity-5" value="uz">
+                className=" text-red-600 opacity-5" value="uz">
                 Uz
               </option>
               <option
-                            onClick={() => setIsOpen(false)}
+                onClick={() => setIsOpen(false)}
 
-              className=" text-red-600 " value="ru">
+                className=" text-red-600 " value="ru">
                 Ru
               </option>
               <option
-                            onClick={() => setIsOpen(false)}
+                onClick={() => setIsOpen(false)}
 
-              className=" text-red-600 " value="en">
+                className=" text-red-600 " value="en">
                 En
               </option>
             </select>

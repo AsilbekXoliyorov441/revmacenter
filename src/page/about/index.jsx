@@ -7,55 +7,51 @@ import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Map from '../../components/map';
 import FormSend from '../../components/form-send';
-import { HeartPulse, Syringe, Microscope, MonitorCheck, UserCheck, ShieldCheck, Clock, Puzzle } from 'lucide-react';
-
-const features = [
-  {
-    icon: <Microscope className="w-6 h-6 text-indigo-600" />,
-    title: 'Лабораторные исследования',
-    description: 'Полный спектр анализов для точной диагностики',
-  },
-  {
-    icon: <MonitorCheck className="w-6 h-6 text-indigo-600" />,
-    title: 'УЗИ-диагностика',
-    description: 'Современные аппараты и опытные специалисты',
-  },
-  {
-    icon: <HeartPulse className="w-6 h-6 text-indigo-600" />,
-    title: 'ЭхоКГ (УЗИ сердца)',
-    description: 'Неинвазивная оценка состояния сердца',
-  },
-  {
-    icon: <Syringe className="w-6 h-6 text-indigo-600" />,
-    title: 'Процедурный кабинет',
-    description: 'Инъекции, капельницы, блокадная терапия и др.',
-  },
-];
+import { UserCheck, ShieldCheck, Clock, Puzzle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const reasons = [
   {
     icon: <UserCheck className="w-6 h-6 text-green-600" />,
-    title: 'Узкопрофильные врачи-ревматологи',
-    description: 'С большим клиническим опытом',
+    titleuz: "Tor sohadagi revmatologlar",
+    titleru: "Узкопрофильные врачи-ревматологи",
+    titleen: "Specialized Rheumatologists",
+    descriptionuz: "Keng klinik tajribaga ega",
+    descriptionru: "С большим клиническим опытом",
+    descriptionen: "With extensive clinical experience",
   },
   {
     icon: <Puzzle className="w-6 h-6 text-green-600" />,
-    title: 'Индивидуальный подход',
-    description: 'К каждому пациенту',
+    titleuz: "Individual yondashuv",
+    titleru: "Индивидуальный подход",
+    titleen: "Personalized Approach",
+    descriptionuz: "Har bir bemorga alohida e’tibor",
+    descriptionru: "К каждому пациенту",
+    descriptionen: "Tailored care for every patient",
   },
   {
     icon: <ShieldCheck className="w-6 h-6 text-green-600" />,
-    title: 'Высокая точность диагностики',
-    description: '',
+    titleuz: "Aniq diagnostika",
+    titleru: "Высокая точность диагностики",
+    titleen: "High Diagnostic Accuracy",
+    descriptionuz: "Zamonaviy texnologiyalar bilan aniqlik",
+    descriptionru: "",
+    descriptionen: "",
   },
   {
     icon: <Clock className="w-6 h-6 text-green-600" />,
-    title: 'Удобное время приёма',
-    description: 'И минимальное ожидание',
+    titleUz: "Qulay qabul vaqti",
+    titleru: "Удобное время приёма",
+    titleen: "Convenient Appointment Time",
+    descriptionuz: "Minimal kutish va moslashuvchan jadval",
+    descriptionru: "И минимальное ожидание",
+    descriptionen: "Minimal waiting time and flexible schedule",
   },
 ];
+
 const AboutPage = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const [t, i18n] = useTranslation()
   return (
     <div className="pt-[60px] md:pt-[110px]">
       {/* Hero Section */}
@@ -64,11 +60,11 @@ const AboutPage = () => {
           {/* Text Content */}
           <div className="z-10 relative flex flex-col h-full justify-between">
             <div className="text-xs sm:text-sm text-gray-600 pt-4 sm:pt-6">
-              <span className="hover:text-blue-600 cursor-pointer">Главная</span>
+              <span className="hover:text-blue-600 cursor-pointer">{t("header.home")}</span>
               <span className="mx-2">/</span>
-              <span className="text-blue-600">О центре</span>
+              <span className="text-blue-600">{t("about.title")}</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 pb-4 sm:pb-6">О центре</h1>
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-800 pb-4 sm:pb-6">{t("about.title")}</h1>
           </div>
 
           {/* Doctor Image - Hidden on small screens, shown on medium and up */}
@@ -83,44 +79,33 @@ const AboutPage = () => {
       {/* Main Content */}
       <div className="prose max-w-6xl mx-auto px-4 sm:px-6 py-6">
         <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6 font-bold">
-          Revma Center Clinic — Клиника для вашего здоровья и движения
+          {t("about.description.text1")}
         </p>
 
         <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6">
-          Revma Center Clinic — это специализированная медицинская клиника, занимающаяся диагностикой и лечением ревматологических заболеваний у взрослых и детей. Мы успешно объединяем передовые технологии, современное оборудование и опыт врачей, чтобы обеспечить нашим пациентам высокий уровень медицинской помощи.
+          {t("about.description.text2")}
         </p>
 
         <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6">
-          Ежегодно в клинике обслуживаются сотни пациентов, страдающих от болезней суставов, соединительной ткани и аутоиммунных заболеваний. Мы предлагаем полный цикл амбулаторно-диагностических услуг — от первичной консультации до комплексного наблюдения и лечения.
+          {t("about.description.text3")}
         </p>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 py-2">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">Наши возможности</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {features.map((item, idx) => (
-            <div key={idx} className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition-all">
-              <div className="flex justify-center mb-4">{item.icon}</div>
-              <h3 className="text-lg font-semibold text-gray-700">{item.title}</h3>
-              <p className="text-sm text-gray-500 mt-2">{item.description}</p>
-            </div>
-          ))}
-        </div>
-
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-10">Почему выбирают нас</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-10"> {t("about.why.title")}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {reasons.map((item, idx) => (
             <div key={idx} className="bg-white rounded-2xl shadow-md p-6 text-center hover:shadow-lg transition-all">
               <div className="flex justify-center mb-4">{item.icon}</div>
-              <h3 className="text-lg font-semibold text-gray-700">{item.title}</h3>
-              <p className="text-sm text-gray-500 mt-2">{item.description}</p>
+              <h3 className="text-lg font-semibold text-gray-700">{item?.[`title${i18n.language}`]}</h3>
+              <p className="text-sm text-gray-500 mt-2">{item?.[`description${i18n.language}`]}</p>
             </div>
           ))}
         </div>
 
         <div className="mt-16 text-center">
           <p className="text-xl text-gray-700 font-medium max-w-2xl mx-auto">
-            В <span className="font-semibold text-indigo-600">Revma Center Clinic</span> мы не просто лечим — мы восстанавливаем качество жизни. Наш приоритет — здоровье ваших суставов, свобода движения и долгосрочный результат.
+            <span className="font-semibold text-indigo-600">{t("about.revma.title")}</span> {t("about.revma.description")}
           </p>
         </div>
       </div>
@@ -230,40 +215,40 @@ const AboutPage = () => {
         <div>
           <div className="flex items-center gap-4 mb-2">
             <img src="line1.png" alt="icon" className="w-14 h-14" />
-            <h4 className="text-lg font-bold">Удобное расположение</h4>
+            <h4 className="text-lg font-bold">{t("about.card.card1-title")}</h4>
           </div>
           <p className="text-gray-700">
-            Мы находимся недалеко от железнодорожной станции Мытищи, и Вы всегда сможете быстро и удобно добраться как с других районов Мытищ, так и из Москвы.
+           {t("about.card.card1-desc")}
           </p>
         </div>
         {/* Block 2 */}
         <div>
           <div className="flex items-center gap-4 mb-2">
             <img src="line2.png" alt="icon" className="w-14 h-14" />
-            <h4 className="text-lg font-bold">Круглосуточная работа мед. центра</h4>
+            <h4 className="text-lg font-bold">{t("about.card.card2-title")}</h4>
           </div>
           <p className="text-gray-700">
-            Медицинский Центр работает круглосуточно, без выходных и праздничных дней. Запись пациентов осуществляется через call-центр, а также в режиме online.
+            {t("about.card.card2-desc")}
           </p>
         </div>
         {/* Block 3 */}
         <div>
           <div className="flex items-center gap-4 mb-2">
             <img src="line3.png" alt="icon" className="w-14 h-14" />
-            <h4 className="text-lg font-bold">Комплексное медицинское обслуживание</h4>
+            <h4 className="text-lg font-bold">{t("about.card.card3-title")}</h4>
           </div>
           <p className="text-gray-700">
-            Работаем как с физическими лицами, так и с корпоративными клиентами, предоставляя комплексное медицинское обслуживание в рамках программ ДМС и за наличный расчет.
+           {t("about.card.card3-desc")}
           </p>
         </div>
         {/* Block 4 */}
         <div>
           <div className="flex items-center gap-4 mb-2">
             <img src="line4.png" alt="icon" className="w-14 h-14" />
-            <h4 className="text-lg font-bold">Одни из лучших специалистов</h4>
+            <h4 className="text-lg font-bold">{t("about.card.card4-title")}</h4>
           </div>
           <p className="text-gray-700">
-            Вас ждут качественный сервис, опытный и высококвалифицированный персонал, комфортные условия.
+            {t("about.card.card4-desc")}
           </p>
         </div>
       </div>

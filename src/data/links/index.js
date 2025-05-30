@@ -1,11 +1,3 @@
-export const links = [
-  { text: "Главный", href: "/" },
-  { text: "Услуги", href: "/services" },
-  { text: "Врачи", href: "/doctors" },
-  { text: "Отзывы", href: "/reviews" },
-  { text: "О центре", href: "/about" },
-  { text: "Контакты", href: "/contact" },
-];
 
 export const services = [
   {
@@ -59,45 +51,44 @@ export const doctors = [
   {
     id: 1,
     image: "/images/doctors/doc-1.png",
-    firstName: "Юсупов Суннатилла",
-    lastName: "Абдумаликович",
-    specialization: "ЛОР",
-    titleEn: "Юсупов Суннатилла Абдумаликович",
+    titleEn: "Yusupov Sunnatilla Abdumalikovich",
     titleRu: "Юсупов Суннатилла Абдумаликович",
-    titleUz: "Юсупов Суннатилла Абдумаликович",
+    titleUz: "Yusupov Sunnatilla Abdumalikovich",
+    specializationEn: "ENT specialist",
+    specializationRu: "ЛОР",
+    specializationUz: "LOR shifokori",
   },
   {
     id: 2,
     image: "images/doctors/doc-2.png",
-    firstName: "Акбарходажева Мунира ",
-    lastName: "Раматходжаевна",
-    specialization: "Кардирематолог.Педиатр",
-    titleEn: "Акбарходажева Мунира Раматходжаевна",
+    titleEn: "Akbarhodjaeva Munira Ramatkhojaevna",
     titleRu: "Акбарходажева Мунира Раматходжаевна",
-    titleUz: "Акбарходажева Мунира Раматходжаевна",
+    titleUz: "Akbarxo‘jayeva Munira Ramatxo‘jayevna",
+    specializationEn: "Cardiorheumatologist. Pediatrician",
+    specializationRu: "Кардирематолог. Педиатр",
+    specializationUz: "Kardioromatolog. Pediatr",
   },
   {
     id: 3,
     image: "images/doctors/doc-4.png",
-    firstName: "Жалолходжева Малика",
-    lastName: "Козимхоновна",
-    specialization: "Ревматолог",
-    titleEn: "Жалолходжева Малика Козимхоновна",
+    titleEn: "Jalolhodjaeva Malika Kozimkhonovna",
     titleRu: "Жалолходжева Малика Козимхоновна",
-    titleUz: "Жалолходжева Малика Козимхоновна",
+    titleUz: "Jalolxo‘jayeva Malika Qozimxonovna",
+    specializationEn: "Rheumatologist",
+    specializationRu: "Ревматолог",
+    specializationUz: "Revmatolog",
   },
   {
     id: 4,
     image: "images/doctors/doc-3.png",
-    firstName: "Мухиддинова Зулайхо",
-    lastName: "Нуриллаевна",
-    specialization: "УЗИ диагностики",
-    titleEn: "Мухиддинова Зулайхо Нуриллаевна",
+    titleEn: "Mukhdinova Zulaykho Nurillaevna",
     titleRu: "Мухиддинова Зулайхо Нуриллаевна",
-    titleUz: "Мухиддинова Зулайхо Нуриллаевна",
+    titleUz: "Muxiddinova Zulayho Nurillayevna",
+    specializationEn: "Ultrasound diagnostics",
+    specializationRu: "УЗИ диагностики",
+    specializationUz: "UZI diagnostikasi",
   },
 ];
-
 
 export const servicesData = [
   {

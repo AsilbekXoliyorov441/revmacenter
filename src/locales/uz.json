@@ -15,19 +15,83 @@
       "about": "Markaz haqida",
       "contact": "Bog‘lanish"
     },
-    "whatsapp": "Whatsapp"
+    "whatsapp": "Whatsapp",
+    "home": "Asosiy"
   },
-  "footer":{
+  "footer": {
     "writeTo": "Yozish",
-    "telegram":"Telegram",
+    "telegram": "Telegram",
     "callback": "Qo‘ng‘iroqni so‘rash",
     "text": "© 2011–2023 Qibray tumani. Universitet ko‘chasi, 5/1. Barcha huquqlar himoyalangan."
   },
-    "about":{
-    "title1":"uz"
+  "about": {
+    "title": "Markaz haqida",
+    "description": {
+      "text1": "Revma Center Clinic — sog‘lig‘ingiz va harakatingiz uchun klinika",
+      "text2": "Revma Center Clinic — kattalar va bolalarda revmatologik kasalliklarni aniqlash va davolashga ixtisoslashgan tibbiyot klinikasi. Biz ilg‘or texnologiyalar, zamonaviy uskunalar va shifokorlar tajribasini birlashtirib, bemorlarimizga yuqori sifatli tibbiy yordam ko‘rsatamiz.",
+      "text3": "Klinikada har yili bo‘g‘imlar, biriktiruvchi to‘qimalar va autoimmun kasalliklardan aziyat chekayotgan yuzlab bemorlar qabul qilinadi. Biz boshlang‘ich maslahatdan tortib, kompleks kuzatuv va davolashgacha bo‘lgan to‘liq ambulator-diagnostika xizmatlarini taklif qilamiz."
+    },
+    "why": {
+      "title": "Nega aynan bizni tanlaysiz"
+    },
+    "revma": {
+      "title": "Revma Center Clinic",
+      "description": "Biz faqat davolamaymiz — hayot sifatini tiklaymiz. Bizning ustuvor vazifamiz — bo‘g‘imlaringiz sog‘ligi, harakat erkinligi va uzoq muddatli natijadir."
+    },
+    "card": {
+      "card1-title": "Qulay joylashuv",
+      "card1-desc": "Biz Mytishchi temiryo‘l vokzaliga yaqin joylashganmiz, shuning uchun siz boshqa tumanlardan va Moskva shahri ichidan tez va oson yetib kelishingiz mumkin.",
+      "card2-title": "Tibbiyot markazi 24/7 ishlaydi",
+      "card2-desc": "Markaz dam olish kunlari va bayramlarsiz doimiy ishlaydi. Bemorlarni qabul qilish call-markaz va onlayn rejimda amalga oshiriladi.",
+      "card3-title": "Kompleks tibbiy xizmatlar",
+      "card3-desc": "Jismoniy shaxslar va korporativ mijozlar bilan ishlaymiz, DMS dasturlari va naqd pul hisobidan kompleks tibbiy xizmatlarni taqdim etamiz.",
+      "card4-title": "Eng yaxshi mutaxassislar",
+      "card4-desc": "Sifatli xizmat, malakali va tajribali xodimlar, qulay sharoitlar sizni kutmoqda."
+    }
   },
-    "hero": {
+  "hero": {
     "title": "Sog‘lig‘ingizga e’tibor bering",
     "text": "Aholiga keng qamrovli tibbiy xizmatlar ko‘rsatamiz: barcha yo‘nalishlardagi mutaxassislar maslahatlari va ambulator davolash, tibbiy ko‘rik va diagnostika jarayonlari."
-  }
+  },
+  "form": {
+    "title": "Qabulga yoziling",
+    "selectService": "Xizmatni tanlang",
+    "selectDoctor": "Vrachni tanlang",
+    "selectDoctorAfterService": "Avval xizmatni tanlang",
+    "name": "Ismingiz",
+    "phone": "Telefon raqamingiz",
+    "submit": "Ariza yuborish",
+    "sending": "Yuborilmoqda...",
+    "policyText": "Ariza yuborish orqali siz maxfiylik siyosatimizga rozilik bildirasiz",
+    "success": "Xabaringiz yuborildi!",
+    "error": "Xatolik yuz berdi. Qaytadan urinib ko‘ring."
+  },
+  "validation": {
+    "service": "Xizmatni tanlang",
+    "doctor": "Vrachni tanlang",
+    "name": "Ismingizni kiriting",
+    "phone": "Telefon raqamini kiriting",
+    "phoneInvalid": "Telefon formati noto‘g‘ri",
+    "policy": "Maxfiylik siyosatiga rozilik belgilang"
+  },
+  "contactPage": {
+    "title": "Klinika bilan bog‘lanish",
+    "metaDescription": "Ushbu tibbiyot markazi revmatizmni davolashga ixtisoslashgan",
+    "header": "Aloqa",
+    "subHeader": "Tibbiyot markazi",
+    "phoneLabel": "Telefon:",
+    "emailLabel": "Elektron pochta",
+    "addressLabel": "Manzil:",
+    "address": "Qibray tumani, Universitet ko‘chasi, 5/1-uy",
+    "workTimeLabel": "Ish vaqti:",
+    "weekdays": "Dushanba–Juma: 08:00–18:00",
+    "saturday": "Shanba: 08:00–14:00"
+  },
+  "breadcrumbs": {
+    "home": "Bosh sahifa",
+    "contacts": "Aloqa"
+  },
+  "home": "Bosh sahifa",
+  "doctors": "Shifokorlar",
+  "appointment": "Qabulga yozilish"
 }

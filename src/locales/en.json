@@ -15,19 +15,83 @@
       "about": "About Center",
       "contact": "Contact"
     },
-    "whatsapp": "Whatsapp"
+    "whatsapp": "Whatsapp",
+    "home": "About us"
   },
-   "footer":{
+  "footer": {
     "writeTo": "Write to",
-    "telegram":"Telegram",
+    "telegram": "Telegram",
     "callback": "Request a callback",
     "text": "© 2011–2023 Kibray District. Universitet Street, 5/1. All rights reserved."
   },
-    "about":{
-    "title1":"en"
+  "about": {
+    "title": "About the Center",
+    "description": {
+      "text1": "Revma Center Clinic — a clinic for your health and mobility",
+      "text2": "Revma Center Clinic is a specialized medical clinic focused on the diagnosis and treatment of rheumatologic diseases in adults and children. We successfully combine advanced technologies, modern equipment, and the experience of our doctors to provide high-quality medical care to our patients.",
+      "text3": "Every year, the clinic treats hundreds of patients suffering from joint, connective tissue, and autoimmune diseases. We offer a full range of outpatient diagnostic services — from initial consultation to comprehensive monitoring and treatment."
+    },
+    "why": {
+      "title": "Why Choose Us"
+    },
+    "revma": {
+      "title": "Revma Center Clinic",
+      "description": "We don’t just treat — we restore quality of life. Our priority is the health of your joints, freedom of movement, and long-term results."
+    },
+    "card": {
+      "card1-title": "Convenient Location",
+      "card1-desc": "We are located near the Mytishchi railway station, making it quick and easy to reach us from other districts of Mytishchi and Moscow.",
+      "card2-title": "Medical Center Open 24/7",
+      "card2-desc": "The Medical Center operates around the clock, without weekends and holidays. Patient appointments are made through the call center and online.",
+      "card3-title": "Comprehensive Medical Services",
+      "card3-desc": "We work with both individuals and corporate clients, providing comprehensive medical services under voluntary medical insurance programs and cash payments.",
+      "card4-title": "One of the Best Specialists",
+      "card4-desc": "You will find quality service, experienced and highly qualified staff, and comfortable conditions."
+    }
   },
-    "hero": {
+  "hero": {
     "title": "Take care of your health",
     "text": "We provide comprehensive medical services to the population: consultations and outpatient treatment by specialists in all fields, medical examinations, and diagnostic procedures."
-  }
+  },
+  "form": {
+    "title": "Book an Appointment",
+    "selectService": "Select a service",
+    "selectDoctor": "Select a doctor",
+    "selectDoctorAfterService": "Please select a service first",
+    "name": "Your name",
+    "phone": "Your phone number",
+    "submit": "Submit application",
+    "sending": "Sending...",
+    "policyText": "By submitting the form, you agree to our privacy policy",
+    "success": "Your message has been sent!",
+    "error": "An error occurred. Please try again."
+  },
+  "validation": {
+    "service": "Please select a service",
+    "doctor": "Please select a doctor",
+    "name": "Please enter your name",
+    "phone": "Please enter your phone number",
+    "phoneInvalid": "Invalid phone number format",
+    "policy": "Please agree to the privacy policy"
+  },
+  "contactPage": {
+    "title": "Contact the Clinic",
+    "metaDescription": "This medical center specializes in treating rheumatism",
+    "header": "Contact",
+    "subHeader": "Medical Center",
+    "phoneLabel": "Phone:",
+    "emailLabel": "E-mail",
+    "addressLabel": "Address:",
+    "address": "Kibray district, Universitet Street, 5/1",
+    "workTimeLabel": "Working hours:",
+    "weekdays": "Monday–Friday: 08:00–18:00",
+    "saturday": "Saturday: 08:00–14:00"
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "contacts": "Contact"
+  },
+  "home": "Home",
+  "doctors": "Doctors",
+  "appointment": "Make an Appointment"
 }
