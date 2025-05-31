@@ -93,5 +93,12 @@
   },
   "home": "Home",
   "doctors": "Doctors",
-  "appointment": "Make an Appointment"
+  "appointment": "Make an Appointment",
+  "service": {
+    "title": "All about our services"
+  },
+  "doctor": {
+    "title": "Doctors of the medical center"
+  },
+  "map": "How to find us"
 }

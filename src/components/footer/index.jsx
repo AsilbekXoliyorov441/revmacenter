@@ -13,7 +13,7 @@ const Footer = () => {
         <div className="container top-footer mx-auto px-[20px]">
           <div className="flex items-center justify-between">
             <Link
-              className="w-[220px] hidden sm:max-w-[300px]   h-[73px] lg:flex items-center"
+              className="w-[300px] hidden sm:max-w-[300px]   h-[73px] lg:flex items-center"
               to={"/"}
             >
               <img

@@ -4,7 +4,6 @@ import { FaWhatsappSquare } from "react-icons/fa";
 import { FaPhoneFlip } from "react-icons/fa6";
 // import { links } from "../../data/links";
 import { useTranslation } from "react-i18next";
-import i18next from "i18next";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +25,7 @@ const Header = () => {
           className="flex items-center justify-between gap-[20px] container mx-auto"
         >
           <Link
-            className="w-[220px] sm:max-w-[300px]   h-[73px] flex items-center"
+            className="w-[300px] sm:max-w-[300px]   h-[73px] flex items-center"
             to={"/"}
           >
             <img className="w-full" src="/LOGO.svg" alt="logo" loading="lazy" />

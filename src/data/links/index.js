@@ -22,33 +22,91 @@ export const services = [
   },
 ];
 
-export const categories = [
-  {
-    title: "Направления",
-    items: [
-      "Ревматология",
-      "Кардиоревматология",
-      "Педиатрия",
-      "Невралогия ",
-      "Лор",
-      "Ортопедия ва травматология",
-    ],
-    button: "Все услуги",
-  },
-  {
-    title: "Диагностика",
-    items: [
-      "Лабораторные анализы.",
-      "Гормональные исследование ",
-      "УЗИ",
-      "ЭКГ",
-      "ЭХО кг",
-      "Рентген",
-      "Нейросонография",
-    ],
-    button: "Вся диагностика",
-  },
-];
+export const categories = {
+  ru: [
+    {
+      title: "Направления",
+      items: [
+        "Ревматология",
+        "Кардиоревматология",
+        "Педиатрия",
+        "Невралогия",
+        "Лор",
+        "Ортопедия ва травматология",
+      ],
+      button: "Все услуги",
+    },
+    {
+      title: "Диагностика",
+      items: [
+        "Лабораторные анализы.",
+        "Гормональные исследование",
+        "УЗИ",
+        "ЭКГ",
+        "ЭХО кг",
+        "Рентген",
+        "Нейросонография",
+      ],
+      button: "Вся диагностика",
+    },
+  ],
+
+  uz: [
+    {
+      title: "Yo‘nalishlar",
+      items: [
+        "Revmatologiya",
+        "Kardiorevmatologiya",
+        "Pediatriya",
+        "Nevrologiya",
+        "LOR",
+        "Ortopediya va travmatologiya",
+      ],
+      button: "Barcha xizmatlar",
+    },
+    {
+      title: "Diagnostika",
+      items: [
+        "Laborator tahlillar",
+        "Gormon tekshiruvlari",
+        "UZI",
+        "EKG",
+        "EHO KG",
+        "Rentgen",
+        "Neyrosonografiya",
+      ],
+      button: "Barcha diagnostika",
+    },
+  ],
+
+  en: [
+    {
+      title: "Departments",
+      items: [
+        "Rheumatology",
+        "Cardiorheumatology",
+        "Pediatrics",
+        "Neurology",
+        "ENT",
+        "Orthopedics and Traumatology",
+      ],
+      button: "All services",
+    },
+    {
+      title: "Diagnostics",
+      items: [
+        "Laboratory tests",
+        "Hormonal tests",
+        "Ultrasound (USG)",
+        "ECG",
+        "Echo CG",
+        "X-ray",
+        "Neurosonography",
+      ],
+      button: "All diagnostics",
+    },
+  ],
+};
 
 
 export const doctors = [
@@ -107,32 +165,51 @@ export const doctors = [
 
 export const servicesData = [
   {
-    title: "Озонотерапия",
-    description:
+    titleuz: "Ozonoterapiya",
+    titleru: "Озонотерапия",
+    titleen: "Ozone Therapy",
+    descriptionuz:
+      "Ozonoterapiya — bu yallig‘lanishga qarshi, antibakterial va immunitetni rag‘batlantiruvchi xususiyatlarga ega ozondan foydalaniladigan davolash usuli.",
+    descriptionru:
       "Озонотерапия — это метод лечения с использованием озона, обладающего противовоспалительными, антибактериальными и иммуномодулирующими свойствами.",
-    slug: "озонотерапия",
+    descriptionen:
+      "Ozone therapy is a treatment method using ozone, which has anti-inflammatory, antibacterial, and immunomodulatory properties.",
     image: "/images/services/service-hero-1.png",
   },
   {
-    title: "Физиотерапия",
-    description:
+    titleuz: "Fizioterapiya",
+    titleru: "Физиотерапия",
+    titleen: "Physiotherapy",
+    descriptionuz:
+      "Fizioterapiya organizm funksiyalarini davolash va tiklash uchun fizik omillar (issiqlik, sovuq, tok, ultratovush) qo‘llanilishini o‘z ichiga oladi.",
+    descriptionru:
       "Физиотерапия включает в себя применение физических факторов (тепло, холод, ток, ультразвук) для лечения и восстановления функций организма.",
-    slug: "физиотерапия",
+    descriptionen:
+      "Physiotherapy involves the use of physical factors (heat, cold, electricity, ultrasound) for treatment and restoration of body functions.",
     image: "/images/services/service-hero-2.png",
   },
   {
-    title: "Массаж",
-    description:
+    titleuz: "Massaj",
+    titleru: "Массаж",
+    titleen: "Massage",
+    descriptionuz:
+      "Massaj qon aylanishini yaxshilaydi, mushaklardagi zo‘riqishni kamaytiradi va organizmni umumiy tinchlantirish hamda tiklanishiga yordam beradi.",
+    descriptionru:
       "Массаж улучшает кровообращение, снимает напряжение мышц и способствует общему расслаблению и восстановлению организма.",
-    slug: "массаж",
+    descriptionen:
+      "Massage improves blood circulation, relieves muscle tension, and promotes overall relaxation and recovery of the body.",
     image: "/images/services/service-hero-3.png",
   },
   {
-    title: "Иглотерапия",
-    description:
+    titleuz: "Ignaterapiya",
+    titleru: "Иглотерапия",
+    titleen: "Acupuncture",
+    descriptionuz:
+      "Ignaterapiya (akupunktura) — bu qadimiy davolash usuli bo‘lib, biologik faol nuqtalarga nozik ignalarni kiritish orqali amalga oshiriladi.",
+    descriptionru:
       "Иглотерапия (акупунктура) — это древний метод лечения с помощью введения тонких игл в биологически активные точки тела.",
-    slug: "иглотерапия",
+    descriptionen:
+      "Acupuncture is an ancient treatment method that involves inserting fine needles into biologically active points of the body.",
     image: "/images/services/service-hero-4.jpg",
   },
 ];
-

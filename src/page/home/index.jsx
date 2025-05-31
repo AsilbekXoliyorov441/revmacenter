@@ -6,8 +6,10 @@ import SwiperDoctors from '../../components/swiper-doctors';
 import About from '../../components/about';
 import Map from '../../components/map';
 import FormSend from '../../components/form-send';
+import { useTranslation } from 'react-i18next';
 
 const HomePage = () => {
+  const {t} = useTranslation()
   return (
     <>
       <Helmet>
@@ -27,7 +29,7 @@ const HomePage = () => {
       <section id="map" className='pt-[90px]'>
         <div className="container mx-auto px-[20px]">
           <h1 className="text-[24px] font-bold sm:text-[28px] leading-0  md:text-[36px] lg:text-[42px]">
-            Как нас найти
+            {t("map")}
           </h1>
           <Map />
         </div>

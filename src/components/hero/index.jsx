@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import i18next from "i18next";
 export default function Hero() {
     const { t, i18n } = useTranslation();
+    const selectedCategories = categories[i18n.language] || "uz";
     return (
         <section>
             <div className="relative">
@@ -55,7 +56,7 @@ export default function Hero() {
                 {/* Cards */}
             </div>
             <div className="container px-4 mx-auto grid grid-cols-1 sm:grid-cols-2  gap-6 mt-[-20px] md:mt-[-50px] relative z-10">
-                {categories.map((category, index) => (
+                {selectedCategories.map((category, index) => (
                     <div
                         key={index}
                         className="bg-blue-50 rounded-lg p-6 shadow-sm flex flex-col justify-between"
@@ -74,7 +75,7 @@ export default function Hero() {
                             to="/contact"
                             className="relative inline-flex  items-center justify-center overflow-hidden rounded-[5px] bg-red-600 px-4 py-2 font-medium text-white transition-colors duration-1000 group"
                         >
-                            Запись на приём
+                            {t("header.full")}
                             <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/70 to-white/0 translate-x-[-100%] translate-y-[100%] rotate-45 scale-150 opacity-0 transition-transform duration-1000 ease-out group-hover:translate-x-[150%] group-hover:translate-y-[-150%] group-hover:opacity-100 pointer-events-none"></span>
                         </Link>
                     </div>

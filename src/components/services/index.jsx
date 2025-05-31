@@ -7,8 +7,10 @@ import "swiper/css/pagination";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import { servicesData } from "../../data/links";
+import { useTranslation } from "react-i18next";
 
 const ServicesSwiper = () => {
+  const { t, i18n } = useTranslation()
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
 
@@ -55,30 +57,30 @@ const ServicesSwiper = () => {
                 <ul className="flex gap-[5px] items-center mt-[60px] md:mt-0 mb-[20px] md:mb-0 lg:pt-[60px]">
                   <li className="flex flex-col">
                     <Link className="text-[#353535] " to="/">
-                      Главная
+                      {t("header.home")}
                       <span className="block h-[1px] -mt-1 pt-0 bg-[#353535]"></span>
                     </Link>
                   </li>
                   <li className="flex flex-col">/</li>
-                  <li className="text-[#35353599]">Услуги</li>
+                  <li className="text-[#35353599]">{t("header.nav.services")}</li>
                 </ul>
                 <div className="flex flex-col gap-[60px] md:gap-[20px] md:flex-row items-center justify-between">
                   <div className="w-full md:w-[50%]">
                     <h1 className="text-[18px] mb-[40px] font-bold text-[#00578A] uppercase">
-                      {item?.slug}
+                      {item?.[`title${i18n.language}`]}
                     </h1>
                     <h2 className="text-[36px] font-[600] leading-[48px] max-w-[650px] mb-[10px]">
-                      {item?.title}
+                      {item?.[`title${i18n.language}`]}
                     </h2>
                     <p className="text-[18px] max-w-[600px] mb-[40px]">
-                      {item?.description}
+                        {item?.[`description${i18n.language}`]}
                     </p>
 
                     <Link
                       to="#"
                       className="relative  text-white bg-red-600 inline-flex  items-center justify-center overflow-hidden rounded-[5px] max-w-[204px] h-[54px] w-full  font-medium  transition-colors duration-1000 group"
                     >
-                      Записаться
+                      {t("header.short")}
                       <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/70 to-white/0 translate-x-[-100%] translate-y-[100%] rotate-45 scale-150 opacity-0 transition-transform duration-1000 ease-out group-hover:translate-x-[150%] group-hover:translate-y-[-150%] group-hover:opacity-100 pointer-events-none"></span>
                     </Link>
                   </div>

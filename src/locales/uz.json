@@ -93,5 +93,12 @@
   },
   "home": "Bosh sahifa",
   "doctors": "Shifokorlar",
-  "appointment": "Qabulga yozilish"
+  "appointment": "Qabulga yozilish",
+  "service": {
+    "title": "Bizning xizmatlarimiz haqida batafsil"
+  },
+  "doctor": {
+    "title": "Tibbiyot markazi shifokorlari"
+  },
+  "map": "Bizni qanday topish mumkin"
 }

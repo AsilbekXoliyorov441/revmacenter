@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import "swiper/css";
+import { useTranslation } from "react-i18next";
 
 export const doctors = [
   {
@@ -59,13 +60,15 @@ export const doctors = [
   },
 ];
 
-const SwiperDoctors = ({ language = "Uz" }) => {
+const SwiperDoctors = () => {
+  const { t, i18n } = useTranslation()
+  const currentLang = i18n.language || "uz"
   return (
     <section id="doctors" className="pt-[90px] pb-[60px]">
       <div className="container mx-auto px-[20px]">
         <div className="relative">
           <h1 className="text-[24px] sm:text-[34px] md:text-[42px] mb-[20px] font-[700]">
-            Врачи медицинского центра
+            {t("doctor.title")}
           </h1>
 
           {/* Custom Navigation Buttons */}
@@ -101,15 +104,17 @@ const SwiperDoctors = ({ language = "Uz" }) => {
                   <img
                     className=" h-[224px] w-[50%] object-cover"
                     src={doc.image}
-                    alt={`${doc.firstName} ${doc.lastName}`}
+                    alt={doc[`title${currentLang.charAt(0).toUpperCase() + currentLang.slice(1)}`] ??
+                      `${doc.firstName} ${doc.lastName}`}
                   />
 
                   <div className="px-4 w-[60%] flex flex-col justify-between h-[200px] pb-[20px]">
                     <p className="text-[20px] font-bold mt-[20px]">
-                      {doc.titleRu} {doc.lastName}
+                      {doc[`title${currentLang.charAt(0).toUpperCase() + currentLang.slice(1)}`] ??
+                        `${doc.firstName} ${doc.lastName}`}
                     </p>
                     <span className="text-[#017CC1] mb-[12px]">
-                      {doc.specializationRu}
+                      {doc?.[`specialization${currentLang.charAt(0).toUpperCase() + currentLang.slice(1)}`]}
                     </span>
                   </div>
                   <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/70 to-white/0 -translate-x-full translate-y-full rotate-45 scale-150 opacity-0 transition-transform duration-1000 ease-out group-hover:translate-x-[150%] group-hover:-translate-y-[150%] group-hover:opacity-100 pointer-events-none" />
