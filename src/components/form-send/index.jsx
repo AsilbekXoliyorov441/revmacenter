@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import { useTranslation } from "react-i18next";
 
 const TELEGRAM_BOT_TOKEN = "7912663808:AAEdKAKzgWROxRtrtfuRlJuK3WDqwlmFYjg"
-const CHAT_ID = "6713537237";
+const CHAT_ID = "-1002465847278";
 
 const phoneRegex = /^(\+?\d{1,3})?[\s-]?\(?\d{2,3}\)?[\s-]?\d{3}[\s-]?\d{2}[\s-]?\d{2}$/;
 
