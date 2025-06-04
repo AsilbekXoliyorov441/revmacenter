@@ -4,47 +4,45 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import "swiper/css";
+import { useTranslation } from "react-i18next";
 
 const services = [
   {
     id: 1,
-    titleUz: "Ozonoterapiya",
-    titleRu: "Озонотерапия",
-    titleEn: "Ozone Therapy",
+    titleuz: "Ozonoterapiya",
+    titleru: "Озонотерапия",
+    titleen: "Ozone Therapy",
     image: "/images/services/service-1.webp",
     price: 120,
-    levels: [{ nameUz: "Premium", nameRu: "Премиум", nameEn: "Premium" }],
   },
   {
     id: 2,
-    titleUz: "Fizioterapiya",
-    titleRu: "Физиотерапия",
-    titleEn: "Physiotherapy",
+    titleuz: "Fizioterapiya",
+    titleru: "Физиотерапия",
+    titleen: "Physiotherapy",
     image: "/images/services/service-2.jpg",
     price: 95,
-    levels: [{ nameUz: "Standard", nameRu: "Стандарт", nameEn: "Standard" }],
   },
   {
     id: 3,
-    titleUz: "Massaj",
-    titleRu: "Массаж",
-    titleEn: "Massage",
+    titleuz: "Massaj",
+    titleru: "Массаж",
+    titleen: "Massage",
     image: "/images/services/service-3.jpg",
     price: 120,
-    levels: [{ nameUz: "Premium", nameRu: "Премиум", nameEn: "Premium" }],
   },
   {
     id: 4,
-    titleUz: "Igloterapiya",
-    titleRu: "Иглотерапия",
-    titleEn: "Acupuncture",
+    titleuz: "Igloterapiya",
+    titleru: "Иглотерапия",
+    titleen: "Acupuncture",
     image: "/images/services/service-4.webp",
     price: 95,
-    levels: [{ nameUz: "Standard", nameRu: "Стандарт", nameEn: "Standard" }],
   },
 ];
 
-const SwiperServices = ({ language = "Uz" }) => {
+const SwiperServices = () => {
+  const { t, i18n } = useTranslation()
   return (
     <section id="services" className="mt-[90px]">
       <div className="container mx-auto px-[20px]">
@@ -87,13 +85,13 @@ const SwiperServices = ({ language = "Uz" }) => {
                   </div>
                   <div className="px-4 flex flex-col justify-between h-[200px] pb-[20px]">
                     <p className=" py-2 text-[20px] font-bold mt-[20px]">
-                      {service[`title${language}`]}
+                      {service[`title${i18n.language}`]}
                     </p>
                     <Link
                       to="/contact"
                       className="relative inline-flex  items-center justify-center overflow-hidden rounded-[5px] bg-red-600 h-[54px] w-full  font-medium text-white transition-colors duration-1000 group"
                     >
-                      Запись на приём
+                      {t("header.full")}
                       <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/70 to-white/0 translate-x-[-100%] translate-y-[100%] rotate-45 scale-150 opacity-0 transition-transform duration-1000 ease-out group-hover:translate-x-[150%] group-hover:translate-y-[-150%] group-hover:opacity-100 pointer-events-none"></span>
                     </Link>
                   </div>

@@ -32,7 +32,7 @@ export default function Hero() {
                                 {t("hero.title")}
                             </h1>
                             <p className="text-lg mb-6 md:w-[550px]">
-                                {t("hero.text")}
+                             {t("about.description.text2")} 
                             </p>
                             <Link
                                 to="/contact"

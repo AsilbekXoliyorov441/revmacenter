@@ -83,7 +83,7 @@ const AboutPage = () => {
         </p>
 
         <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6">
-          {t("about.description.text2")}
+          {t("hero.text")}
         </p>
 
         <p className="text-base sm:text-lg text-gray-700 mb-4 sm:mb-6">
@@ -218,7 +218,7 @@ const AboutPage = () => {
             <h4 className="text-lg font-bold">{t("about.card.card1-title")}</h4>
           </div>
           <p className="text-gray-700">
-           {t("about.card.card1-desc")}
+            {t("about.card.card1-desc")}
           </p>
         </div>
         {/* Block 2 */}
@@ -238,7 +238,7 @@ const AboutPage = () => {
             <h4 className="text-lg font-bold">{t("about.card.card3-title")}</h4>
           </div>
           <p className="text-gray-700">
-           {t("about.card.card3-desc")}
+            {t("about.card.card3-desc")}
           </p>
         </div>
         {/* Block 4 */}
